@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Macro Portas XD </title>
+    <link rel="shortcut icon" href="sistema/icons/logos/doors.png" type="image/x-icon">
+
+    <script src="sistema/js/dropdown.js" defer></script>
+    <script src="sistema/js/login.js" defer></script>
+    <script src="sistema/js/script.js" defer></script>
+
+    <link rel="stylesheet" href="sistema/style/dropdown.css">
+    <link rel="stylesheet" href="sistema/style/desktop.css">
+
+</head>
+
+<body class="bg">
+    <!-- <iframe src="https://olafwempe.com/mp3/silence/silence.mp3" type="audio/mp3" allow="autoplay" id=”audio”
+        style="display:none"></iframe>
+    <audio autoplay>
+        <source src="sistema/icons/audio.mp3" type="audio/mp3">
+    </audio> -->
+    <div class="login">
+        <div id="userBox">
+            <ul id="users">
+                <h1> Logins Recentes </h1>
+            </ul>
+        </div>
+        <form autocomplete="off">
+            <section>
+                <div title="Escolher imagem de perfil" onclick="document.getElementById('file').click()">
+                    <img src="sistema/icons/user/profile.png" class="photo">
+                    <input type="file" id="file" accept=".png, .jpg, .jpeg, .webp">
+                </div>
+                <div class="loginInformation">
+                    <div>
+                        <input type="text" class="userNameInput" placeholder="Usuário" id="nome">
+                        <label class="buttonArea inputRightButton" title="Iniciar">
+                            <img src="sistema/icons/arrow/simpleRight.png" class="monoIcon">
+                            <input type="submit" class="enviar" href="desktop.html">
+                        </label>
+                    </div>
+                    <div>
+                        <label class="buttonArea inputLeftButton showPass" title="Iniciar">
+                            <img src="sistema/icons/eye/eye.png" class="monoIcon">
+                        </label>
+                        <input type="password" class="passwordBar" placeholder="senha" id="senha">
+                        <!-- <label class="buttonArea inputRightButton" title="Iniciar">
+                            <img src="sistema/icons/backspace.png" class="monoIcon">
+                            <input type="reset" value="">
+                        </label> -->
+                        <button class="buttonArea inputRightButton" title="Limpar pesquisa"
+                            onclick="document.getElementById('senha').value=''">
+                            <img src="sistema/icons/backspace.png" class="monoIcon">
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="erro disabled" id="minCharacter">
+                <span> No mínimo três caracteres! </span>
+            </section>
+            <section class="erro disabled" id="wrongPass">
+                <span> Senha incorreta! </span>
+            </section>
+            <section class="erro disabled" id="nonePass">
+                <span> Insira uma senha </span>
+            </section>
+        </form>
+    </div>
+
+    <div class="loading">
+        <section>
+            <img src="sistema/icons/loading.gif">
+            <span> Carregando </span>
+        </section>
+    </div>
+    <div class="fundo">
+        <!-- Caixa de Seleção -->
+        <div class="selectionBox"></div>
+        <!-- menu de contexto do DESKTOP -->
+        <div class="dropdownMenu topLeftStart">
+            <ul>
+                <h1> atalho </h1>
+                <li>
+                    <button class="dropdownItem">
+                        <img src="sistema/icons/start.png" class="monoIcon">
+                        <span> Executar </span>
+                    </button>
+                </li>
+                <li>
+                    <button class="dropdownItem">
+                        <img src="sistema/icons/folder.png" class="monoIcon">
+                        <span> Abrir local </span>
+                    </button>
+                </li>
+                <li>
+                    <button class="dropdownItem">
+                        <img src="sistema/icons/properties.png" class="monoIcon">
+                        <span> Propriedades </span>
+                    </button>
+                </li>
+                <hr>
+                <li>
+                    <button class="dropdownItem">
+                        <img src="sistema/icons/copy.png" class="monoIcon">
+                        <span> Copiar </span>
+                        <span class="dropdownDescription"> ctrl + c </span>
+                    </button>
+                </li>
+                <li>
+                    <button class="dropdownItem">
+                        <img src="sistema/icons/paste.png" class="monoIcon">
+                        <span> Colar </span>
+                        <span class="dropdownDescription"> ctrl + v </span>
+                    </button>
+                </li>
+                <li>
+                    <button class="dropdownItem">
+                        <img src="sistema/icons/cut.png" class="monoIcon">
+                        <span> Recortar </span>
+                        <span class="dropdownDescription"> ctrl + x </span>
+                    </button>
+                </li>
+                <li>
+                    <button class="dropdownItem">
+                        <img src="sistema/icons/duplicate.png" class="monoIcon">
+                        <span> Duplicar </span>
+                    </button>
+                </li>
+                <hr>
+                <li>
+                    <button class="dropdownItem">
+                        <img src="sistema/icons/share.png" class="monoIcon">
+                        <span> Compartilhar </span>
+                    </button>
+                </li>
+                <li class="dropdownMenu">
+                    <button class="dropdownItem disabled">
+                        <img src="sistema/icons/compact.png" class="monoIcon">
+                        <span> Compactar </span>
+                        <img src="sistema/icons/arrow/simpleright.png" class="monoIcon">
+                    </button>
+                    <ul>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="" class="monoIcon">
+                                <span> WinZip </span>
+                                <span> .zip </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="" class="monoIcon">
+                                <span> Seven Zip </span>
+                                <span> .7z </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="" class="monoIcon">
+                                <span> WinRAR </span>
+                                <span> .rar </span>
+                            </button>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="dropdownItem">
+                        <img src="sistema/icons/rename.png" class="monoIcon">
+                        <span> Renomear </span>
+                    </button>
+                </li>
+                <li class="dropdownMenu">
+                    <button class="dropdownItem">
+                        <img src="sistema/icons/trashcam.png" class="monoIcon">
+                        <span> Apagar </span>
+                        <img src="sistema/icons/arrow/simpleright.png" class="monoIcon">
+                    </button>
+                    <ul>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/fire.png" class="monoIcon">
+                                <span> Queimar </span>
+                            </button>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- menu de contexto dos ATALHOS -->
+        <div class="dropdownMenu topLeftStart contextMenu">
+            <ul>
+                <h1> Área de trabalho </h1>
+                <li class="dropdownMenu">
+                    <button class="dropdownItem">
+                        <img src="sistema/icons/more.png" class="monoIcon">
+                        <span> Novo </span>
+                        <img src="sistema/icons/arrow/simpleright.png" class="monoIcon">
+                    </button>
+                    <ul>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/folder.png" class="monoIcon">
+                                <span> Pasta </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/files/txt.png">
+                                <span> Texto </span>
+                            </button>
+                        </li>
+                        <hr>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/files/excel.png">
+                                <span> Excel </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/files/pwp.png">
+                                <span> PowerPoint </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/files/Word.png">
+                                <span> Word </span>
+                            </button>
+                        </li>
+                        <hr>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/files/docs.png">
+                                <span> Docs </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/files/Plains.png">
+                                <span> Plains </span>
+                            </button>
+                        </li>
+                        <hr>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/files/css.png">
+                                <span> CSS </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/files/generic.png">
+                                <span> HTML </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/files/js.png">
+                                <span> JS </span>
+                            </button>
+                        </li>
+                        <hr>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/files/illustrator.png">
+                                <span> Adobe Illustrator </span>
+                            </button>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="dropdownItem">
+                        <img src="sistema/icons/properties.png" class="monoIcon">
+                        <span> Propriedades </span>
+                    </button>
+                </li>
+                <hr>
+                <li>
+                    <button class="dropdownItem">
+                        <img src="sistema/icons/paste.png" class="monoIcon">
+                        <span> Colar </span>
+                        <span> ctrl + v </span>
+                    </button>
+                </li>
+                <!-- <li>
+                    <label class="dropdownItem" for="changeWallpper">
+                        <img src="sistema/icons/image.png" class="monoIcon">
+                        <span> Mudar papel de parede </span>
+                        <input type="file" id="changeWallpper" class="changeWallpaper"
+                            accept=".png, .jpg, .jpeg, .webp">
+                    </label>
+                </li> -->
+            </ul>
+        </div>
+
+    </div>
+
+    <ul class="desktop">
+        <li>
+            <button onclick="createWindow(event);this.blur();" class="shortcut openDesktop" id="arquivos">
+                <img src="programas/arquivos/icon.png">
+                <span> Arquivos </span>
+            </button>
+        </li>
+        <li>
+            <button onclick="createWindow(event);this.blur();" class="shortcut openDesktop" id="editorDeCookies">
+                <img src="programas/editorDeCookies/icon.png">
+                <span> Editor de Cookies </span>
+            </button>
+        </li>
+        <li>
+            <button onclick="createWindow(event);this.blur();" class="shortcut openDesktop" id="lixeira">
+                <img src="programas/lixeira/icon.png">
+                <span> Lixeira </span>
+                <img src="sistema/icons/shortcut.png" class="shortcut-icon">
+            </button>
+        </li>
+        <li>
+            <button onclick="createWindow(event);this.blur();" class="shortcut openDesktop" id="ajustes">
+                <img src="programas/ajustes/icon.png">
+                <span> Ajustes </span>
+                <img src="sistema/icons/shortcut.png" class="shortcut-icon">
+            </button>
+        </li>
+        <li>
+            <button onclick="createWindow(event);this.blur();" class="shortcut openDesktop" id="internet">
+                <img src="programas/internet/icon.png">
+                <span> Internet </span>
+                <img src="sistema/icons/shortcut.png" class="shortcut-icon">
+            </button>
+        </li>
+        <li>
+            <button onclick="createWindow(event);this.blur();" class="shortcut openDesktop" id="anotações">
+                <img src="programas/anotações/icon.png">
+                <span> Anotações </span>
+                <img src="sistema/icons/shortcut.png" class="shortcut-icon">
+            </button>
+        </li>
+        <li>
+            <button onclick="createWindow(event);this.blur();" class="shortcut openDesktop" id="calculadora">
+                <img src="programas/calculadora/icon.png">
+                <span> Calculadora </span>
+                <img src="sistema/icons/shortcut.png" class="shortcut-icon">
+            </button>
+        </li>
+        <li>
+            <button onclick="createWindow(event);this.blur();" class="shortcut openDesktop" id="paint">
+                <img src="programas/paint/icon.png">
+                <span> Paint </span>
+                <img src="sistema/icons/shortcut.png" class="shortcut-icon">
+            </button>
+        </li>
+        <li>
+            <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ' target="_blank" class="shortcut openDesktop"
+                title="Link da web">
+                <img src="sistema/icons/logos/youtube.png">
+                <span> Youtube </span>
+                <img src="sistema/icons/link.png" class="shortcut-icon">
+            </a>
+        </li>
+        <li>
+            <button onclick="createWindow(event);this.blur();;this.blur();" class="shortcut openDesktop" id="cubes">
+                <img src="programas/cubes/icon.png">
+                <span> Cubes </span>
+                <img src="sistema/icons/shortcut.png" class="shortcut-icon">
+            </button>
+        </li>
+    </ul>
+
+    <div class="taskBar">
+        <div class="startMenuBar">
+            <div class="dropdownMenu bottomLeftStart">
+                <button class="buttonArea" title="Programas">
+                    <img src="sistema/icons/apps.png" class="monoIcon">
+                </button>
+                <ul>
+                    <h1> Programas </h1>
+                    <li>
+                        <button onclick="createWindow(event);this.blur();" class="dropdownItem" id="arquivos">
+                            <img src="programas/arquivos/icon.png">
+                            <span> Arquivos </span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="createWindow(event);this.blur();" class="dropdownItem" id="lixeira">
+                            <img src="programas/lixeira/icon.png">
+                            <span> Lixeira </span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="createWindow(event);this.blur();" class="dropdownItem" id="ajustes">
+                            <img src="programas/ajustes/icon.png">
+                            <span> Ajustes </span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="createWindow(event);this.blur();" class="dropdownItem" id="internet">
+                            <img src="programas/internet/icon.png">
+                            <span> Internet </span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="createWindow(event);this.blur();" class="dropdownItem" id="anotações">
+                            <img src="programas/anotações/icon.png">
+                            <span> Anotações </span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="createWindow(event);this.blur();" class="dropdownItem" id="jogo da memoria">
+                            <img src="programas/jogo da memoria/icon.png">
+                            <span> Jogo da memória </span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="createWindow(event);this.blur();" class="dropdownItem" id="campo minado">
+                            <img src="programas/campo minado/icon.png">
+                            <span> Campo minado </span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="createWindow(event);this.blur();" class="dropdownItem" id="calculadora">
+                            <img src="programas/calculadora/icon.png">
+                            <span> Calculadora </span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="createWindow(event);this.blur();" class="dropdownItem" id="paint">
+                            <img src="programas/paint/icon.png">
+                            <span> Paint </span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="createWindow(event);this.blur();" class="dropdownItem" id="cubes">
+                            <img src="programas/cubes/icon.png">
+                            <span> Cubes </span>
+                        </button>
+                    </li>
+                    <li>
+                        <form class="searchForm">
+                            <input type="text" placeholder="Buscar programas" id="desktopSearchBar">
+                            <label class="buttonArea inputRightButton" title="Buscar">
+                                <input type="submit">
+                                <img src="sistema/icons/find.png" class="monoIcon">
+                            </label>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            <button target="_parent" class="buttonArea dtHome" title="Área de trabalho">
+                <img src="sistema/icons/home.png" class="monoIcon">
+            </button>
+        </div>
+        <div class="programsBar">
+        </div>
+        <div class="actionBar">
+            <div class="dropdownMenu bottomRightStart">
+                <button class="buttonArea" title="Lixeira">
+                    <img src="sistema/icons/trashcam.png" class="monoIcon">
+                </button>
+                <ul>
+                    <h1> Lixeira </h1>
+                    <li>
+                        <button class="dropdownItem">
+                            <img src="sistema/icons/arrow/rotateLeft.png" class="monoIcon">
+                            <span> Recuperar </span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="dropdownItem">
+                            <img src="sistema/icons/fire.png" class="monoIcon">
+                            <span> Queimar </span>
+                        </button>
+                    </li>
+                    <hr>
+                    <li>
+                        <button class="dropdownItem" id="lixeira" onclick="createWindow(event);this.blur();">
+                            <img src="sistema/icons/trashcam.png" class="monoIcon">
+                            <span> Abrir </span>
+                            <img src="sistema/icons/arrow/longTopRight.png" class="monoIcon">
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <label class="buttonArea" title="Microfone
+            ligado">
+                <input type="checkbox" checked>
+                <img src="sistema/icons/sound/mic.png" class="monoIcon">
+                <div class="checkBox"></div>
+            </label>
+            <label class="buttonArea" title="Wi-fi
+            ligado">
+                <input type="checkbox" checked>
+                <img src="sistema/icons/network/wifi.png" class="monoIcon">
+                <div class="checkBox"></div>
+            </label>
+            <div class="dropdownMenu bottomRightStart">
+                <button class="buttonArea volume" title="Volume
+                10%">
+                    <img src="sistema/icons/sound/volume1.png" class="monoIcon">
+                </button>
+                <ul>
+                    <h1> Volume </h1>
+                    <li>
+                        <div class="dropdownSlider" title="Volume">
+                            <button class="buttonArea icoVolume"
+                                onclick="soundInput.value=0, soundDisplay.value=0, document.body.style.setProperty('var(--rangeValue)', '0')"
+                                title="Mutar som">
+                                <img src="sistema/icons/sound/volume0.png" class="monoIcon">
+                            </button>
+                            <input type="range" id="soundInput" value="10" min="0" max="100"
+                                oninput="soundDisplay.value=value">
+                            <input type="number" value="10" min="0" max="100" id="soundDisplay"
+                                oninput="soundInput.value=value">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <button class="buttonArea battery" title="Bateria">
+                <img src="sistema/icons/battery/battery0.png" class="monoIcon">
+            </button>
+            <div class="dropdownMenu bottomRightStart">
+                <button class="buttonArea" title="Relógio
+                'Que horas são?'">
+                    <div class="timerBar">
+                        <span> 15:32:18 </span>
+                        <span> 08/11/2022 </span>
+                    </div>
+                </button>
+                <ul>
+                    <h1> Ações </h1>
+                    <li>
+                        <div class="dropdownSlider" title="Brilho">
+                            <img src="sistema/icons/brightness.png" class="monoIcon">
+                            <input type="range" id="lightInput" value="10" min="0" max="100"
+                                oninput="lightDisplay.value=value" class="slider-progress">
+                            <input type="number" value="10" min="0" max="100" id="lightDisplay"
+                                oninput="lightInput.value=value">
+                        </div>
+                    </li>
+                    <li class="dropdownMenu">
+                        <button class="dropdownItem">
+                            <img src="sistema/icons/screenMode/touch.png" class="monoIcon">
+                            <span> Visualização </span>
+                            <img src="sistema/icons/arrow/simpleRight.png" class="monoIcon">
+                        </button>
+                        <ul>
+                            <li>
+                                <label class="dropdownItem">
+                                    <input type="radio" name="viewModeSelection">
+                                    <img src="sistema/icons/screenMode/cursor.png" class="monoIcon">
+                                    <span> Modo desktop </span>
+                                    <div class="checkRadio"> </div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="dropdownItem">
+                                    <input type="radio" name="viewModeSelection" checked>
+                                    <img src="sistema/icons/screenMode/touch.png" class="monoIcon">
+                                    <span> Modo tablet </span>
+                                    <div class="checkRadio"> </div>
+                                </label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label class="dropdownItem">
+                            <img src="sistema/icons/network/bluetooth.png" class="monoIcon">
+                            <span> Bluetooth </span>
+                            <input type="checkbox" checked>
+                            <div class="checkmark">
+                                <img src="sistema/icons/close.png" class="monoIcon unchecked">
+                                <img src="sistema/icons/apply.png" class="checked">
+                            </div>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="dropdownItem">
+                            <img src="sistema/icons/location.png" class="monoIcon">
+                            <span> Localização </span>
+                            <input type="checkbox" checked>
+                            <div class="checkmark">
+                                <img src="sistema/icons/close.png" class="monoIcon unchecked">
+                                <img src="sistema/icons/apply.png" class="checked">
+                            </div>
+                        </label>
+                    </li>
+                    <div class="dropdownMenu">
+                        <button class="dropdownItem">
+                            <img src="sistema/icons/pendrive.png" class="monoIcon">
+                            <span> Hardware externo </span>
+                            <img src="sistema/icons/arrow/simpleRight.png" class="monoIcon">
+                        </button>
+                        <ul>
+                            <li class="dropdownMenu">
+                                <button class="dropdownItem">
+                                    <img src="sistema/icons/pendrive.png" class="monoIcon">
+                                    <div>
+                                        <span> Pendrive </span>
+                                        <span> (USB) **** </span>
+                                    </div>
+                                    <img src="sistema/icons/arrow/simpleRight.png" class="monoIcon">
+                                </button>
+                                <ul>
+                                    <h1> ações </h1>
+                                    <li>
+                                        <button class="dropdownItem">
+                                            <img src="sistema/icons/eject.png" class="monoIcon">
+                                            <span> Ejetar </span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <h1> usuário </h1>
+                    <div class="dropdownMenu">
+                        <button class="dropdownItem">
+                            <img src="sistema/icons/user/userDefault.png" class="userPicture">
+                            <span class="userName"> </span>
+                            <img src="sistema/icons/arrow/simpleRight.png" class="monoIcon">
+                        </button>
+                        <ul>
+                            <h1> usuários </h1>
+                            <li>
+                                <label class="dropdownItem dropdownUser">
+                                    <img src="sistema/icons/user/userDefault.png" class="userPicture">
+                                    <span class="userName"> </span>
+                                    <input type="radio" name="userSelection">
+                                    <div class="checkRadio"> </div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="dropdownItem dropdownUser">
+                                    <img src="sistema/icons/user/userDefault.png" class="userPicture">
+                                    <span class="userName"> </span>
+                                    <input type="radio" name="userSelection" checked>
+                                    <div class="checkRadio"> </div>
+                                </label>
+                            </li>
+                            <hr>
+                            <li>
+                                <button class="dropdownItem">
+                                    <img src="sistema/icons/properties.png" class="monoIcon">
+                                    <span> Ajustar usuário </span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="dropdownItem" onclick="window.location.reload()">
+                                    <img src="sistema/icons/exit.png" class="monoIcon">
+                                    <span> sair </span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dropdownMenu">
+                        <button class="dropdownItem">
+                            <img src="sistema/icons/power.png" class="monoIcon">
+                            <span> Desligar </span>
+                            <img src="sistema/icons/arrow/simpleRight.png" class="monoIcon">
+                        </button>
+                        <ul>
+                            <li>
+                                <button class="dropdownItem" onclick="window.location.reload()">
+                                    <img src="sistema/icons/arrow/rotateLeft.png" class="monoIcon">
+                                    <span> Reiniciar </span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="dropdownItem">
+                                    <img src="sistema/icons/minus.png" class="monoIcon">
+                                    <span> Suspender </span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        document.querySelector("#soundInput").addEventListener("input", ({ target }) => {
+            document.querySelector(".volume").setAttribute("title", "Volume \n" + target.value + "%")
+            const volume = document.querySelector(".volume").children[0],
+                icovolume = document.querySelector(".icoVolume").children[0];
+            if (target.value >= 70) {
+                volume.src = "sistema/icons/sound/volume2.png";
+                icovolume.src = "sistema/icons/sound/volume2.png";
+            } else {
+                volume.src = "sistema/icons/sound/volume1.png";
+                icovolume.src = "sistema/icons/sound/volume1.png";
+            }
+            if (target.value == 0) {
+                volume.src = "sistema/icons/sound/volume0.png";
+                icovolume.src = "sistema/icons/sound/volume0.png";
+            }
+        });
+        document.querySelector("#soundDisplay").addEventListener("input", ({ target }) => {
+            if (target.value > 100) target.value = 100; else if (target.value == "") { target.value = 0; document.querySelector("#soundInput").value = 0; }
+            if (target.value > 0 && target.value < 10) { target.value = target.value.replace(/0/g, "") }
+            if (target.value == "00") { target.value = 0; }
+            if (target.value.length == 3 && target.value != 100) { target.value = target.value.replace("0", "") }
+        })
+        for (let e of document.querySelectorAll('input[type="range"]')) {
+            e.style.setProperty('--rangeValue', e.value);
+            e.style.setProperty('--min', e.min == '' ? '0' : e.min);
+            e.style.setProperty('--max', e.max == '' ? '100' : e.max);
+            e.addEventListener('input', () => { e.style.setProperty('--rangeValue', e.value) });
+        }
+
+
+        function myFunction() {
+            var x = document.getElementById("myRange").value;
+            document.getElementById("demo").innerHTML = x;
+        }
+        document.querySelector(".timerBar").children[0].innerText = new Date().toLocaleTimeString();
+        document.querySelector(".timerBar").children[1].innerText = new Date().toLocaleDateString()
+        setInterval(() => {
+            document.querySelector(".timerBar").children[0].innerText = new Date().toLocaleTimeString();
+            if (document.querySelector(".timerBar").children[0].innerText == "00:00:00") {
+                document.querySelector(".timerBar").children[1].innerText = new Date().toLocaleDateString();
+            }
+        }, 1000)
+        let timeBattery = 0;
+        setInterval(() => {
+            document.querySelector(".battery").children[0].src = "sistema/icons/battery/battery" + timeBattery + ".png";
+            if (timeBattery < 3) { timeBattery++ } else { timeBattery = 0 }
+        }, 10000);
+        picture();
+        function picture() {
+            const userPicture = document.querySelectorAll(".userPicture");
+            const userName = document.querySelectorAll(".userName");
+            let a = 0
+            if (localStorage.getItem("userPicture") != null) {
+                a = 1;
+            }
+            let userCount = 0;
+            while (userCount < userPicture.length) {
+                if (a) { userPicture[userCount].src = localStorage.getItem("userPicture"); } else { userPicture[userCount].classList.add("monoIcon") }
+                userName[userCount].innerText = localStorage.getItem("userName");
+                userCount++
+            }
+        }
+        window.addEventListener("contextmenu", () => {
+            event.preventDefault();
+        })
+        if (localStorage.getItem("bg") != null) {
+            document.body.style.setProperty('--systemBackground', localStorage.getItem("bg"));
+        }
+
+        document.querySelector(".programsBar").style.paddingLeft = (parseFloat(window.getComputedStyle(document.querySelector(".actionBar")).width) - parseFloat(window.getComputedStyle(document.querySelector(".startMenuBar")).width)) + "px";
+
+        let quant = 0;
+        function createWindow(event) {
+            let abrir;
+            let href;
+
+            if (event.target.id == "") {
+                abrir = event.composedPath()[1].id;
+            } else {
+                abrir = event.target.id;
+            }
+            href = "programas/" + abrir + "/index.html"
+            abrir = abrir.replace(/ /g, "") + quant;
+            quant++
+
+            const newWindow = document.createElement("div");
+            newWindow.classList.add("lock"); newWindow.classList.add("window"); newWindow.classList.add(abrir);newWindow.classList.add("notReady");
+            document.body.appendChild(newWindow);
+
+            let icoSrc = abrir.replace(/\d/gim, "");
+            let ico = "ico" + abrir.replace(/[^0-9]/g, '');
+
+            const newIco = document.createElement("button");
+            newIco.setAttribute("target", "_parent"); newIco.classList.add("buttonArea"); newIco.classList.add("ico"); newIco.classList.add(ico);
+
+            const newIcoImg = document.createElement("img");
+            newIcoImg.src = "programas/" + icoSrc + "/icon.png"
+
+            newIco.appendChild(newIcoImg);
+            document.querySelector(".programsBar").appendChild(newIco);
+            newWindow.addEventListener("mousedown", windowFocus);
+            newIco.addEventListener("mousedown", windowFocus);
+            let x = 1;
+            function dtHome() {
+                a = 0;
+                const b = document.querySelectorAll(".window");
+                const c = document.querySelectorAll(".ico");
+                while (a < b.length) {
+                    b[a].classList.remove("windowFocus");
+                    b[a].style.display = "none";
+                    c[a].children[0].classList.remove("selected")
+                    a++
+                }
+                x = 0;
+            }
+            let fcs = 0;
+            newIco.addEventListener("mouseover", (e) => {
+                if (newIco.classList[3] == "icoSelected") { fcs = 1 } else { fcs = 0 }
+                newIco.classList.add("icoSelected");
+            })
+            newIco.addEventListener("mouseout", (e) => {
+                if (!fcs) {
+                    newIco.classList.remove("icoSelected");
+                }
+            })
+            document.querySelector(".dtHome").addEventListener("click", dtHome);
+            function windowFocus(event) {
+                a = 0;
+                const b = document.querySelectorAll(".window");
+                const c = document.querySelectorAll(".ico");
+                while (a < b.length) {
+                    b[a].classList.remove("windowFocus");
+                    c[a].classList.remove("icoSelected")
+                    a++
+                }
+                newWindow.classList.add("windowFocus");
+                newIco.classList.add("icoSelected");
+
+                let click;
+                if (event.target.classList[1] == "ico") {
+                    click = event.target.classList[2];
+                    icons(click)
+                } else if (event.composedPath()[1].classList[1] == "ico") {
+                    click = event.composedPath()[1].classList[2];
+                    icons(click)
+                } else if (event.composedPath()[2].classList[1] == "ico") {
+                    click = event.composedPath()[2].classList[2];
+                    icons(click)
+                }
+                function icons(e) {
+                    if (window.getComputedStyle(newWindow).display == "none") {
+                        newIco.style.filter = "saturate(1)";
+                        newWindow.style.display = "block";
+                        newWindow.classList.document.querySelector(".ico" + d);
+                        newIco.classList.add("icoSelected");
+                        newIco.classList.add("windowFocus");
+                    } else {
+                        newIco.style.filter = "saturate(0)";
+                        newWindow.style.transition = "var(--transitionNormal)";
+                        newWindow.style.opacity = "0";
+                        newWindow.style.scale = "0";
+                        setTimeout(function () {
+                            newWindow.classList.remove("windowFocus");
+                            newIco.classList.remove("icoSelected");
+                            newWindow.style.display = "none";
+                            newWindow.style.opacity = "1";
+                            newWindow.style.transition = "none";
+                            newWindow.style.scale = "none";
+                        }, 150);
+                    }
+                }
+            }
+            opened(abrir, href, quant)
+        }
+        function opened(event, href, count) {
+            count--
+            document.querySelector("." + event).innerHTML = "";
+            xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    document.querySelector("." + event).innerHTML = xhr.responseText;
+
+                    document.querySelector(".closeWindow").classList.replace("closeWindow", "closeWindow" + count);
+                    document.querySelector(".minimizar").classList.replace("minimizar", "minimizar" + count);
+                    document.querySelector(".maximizar").classList.replace("maximizar", "maximizar" + count);
+                    document.querySelector(".esconder").classList.replace("esconder", "esconder" + count);
+                    document.querySelector(".headDraggable").classList.replace("headDraggable", "headDraggable" + count);
+
+                    document.querySelector(".closeWindow" + count).addEventListener("click", close);
+                    document.querySelector(".minimizar" + count).addEventListener("click", minimizar);
+                    document.querySelector(".maximizar" + count).addEventListener("click", maximizar);
+                    document.querySelector(".esconder" + count).addEventListener("click", esconder);
+                    // chamar(event);
+                    definirArrastavel(event, count);
+                    openJS(event)
+                }
+            }
+            xhr.open("GET", href, true);
+            xhr.setRequestHeader("Content-type", "text/html");
+            xhr.send();
+            document.querySelector("." + event).classList.remove("lock");
+
+            setTimeout(() => {
+
+            }
+                , 500);
+
+        }
+        function openJS(event) {
+            const script = document.createElement("script");
+            script.src = "programas/" + event.replace(/\d/g, "") + "/script.js";
+            script.classList.add(event);
+            document.body.appendChild(script)
+        }
+        function close(event) {
+            let a = 0;
+            let b = 1;
+            while (a < b) {
+                if (event.composedPath()[a].classList[0] == "window") {
+                    let c = event.composedPath()[a].classList[1];
+                    document.querySelector("." + c).style.transition = "var(--transitionNormal)";
+                    document.querySelector("." + c).style.opacity = "0";
+                    document.querySelector("." + c).style.scale = "var(--buttonScale)";
+                    setTimeout(function () {
+                        document.querySelector("." + c).remove();
+                    }, 150);
+                    let d = c.replace(/[^0-9]/g, '');
+                    document.querySelector(".ico" + d).style.width = "0";
+                    document.querySelector(".ico" + d).style.minWidth = "0";
+                    document.querySelector(".ico" + d).style.transition = "var(--transitionNormal)";
+                    document.querySelector(".ico" + d).style.opacity = "0";
+                    document.querySelector(".ico" + d).style.scale = ".5";
+                    setTimeout(function () {
+                        document.querySelector(".ico" + d).remove();
+                    }, 150);
+                } else { b++ }
+                a++
+            }
+        }
+        let minY;
+        let minX;
+        function minimizar(event) {
+            let a = 0;
+            let b = 1;
+            while (a < b) {
+                if (event.composedPath()[a].classList[0] == "window") {
+                    let c = event.composedPath()[a].classList[1];
+                    let count = c.replace(/\D/gim, '');
+
+                    document.querySelector("." + c).style.left = minX + 'px';
+                    document.querySelector("." + c).style.top = minY + 'px';
+                    document.querySelector("." + c).setAttribute("id", "windowMin");
+                    document.querySelector(".minimizar" + count).classList.add("lock");
+                    document.querySelector(".maximizar" + count).classList.remove("lock");
+                    setTimeout(function () {
+                        document.querySelector("." + c).style.transition = "outline var(--transitionNormal)";
+                    }, 150);
+                } else { b++ }
+                a++
+            }
+        }
+        function maximizar(event) {
+            let a = 0;
+            let b = 1;
+            while (a < b) {
+                if (event.composedPath()[a].classList[0] == "window") {
+                    let c = event.composedPath()[a].classList[1];
+                    let count = c.replace(/\D/gim, '');
+
+                    minY = window.getComputedStyle(document.querySelector("." + c)).top.replace("px", "");
+                    minX = window.getComputedStyle(document.querySelector("." + c)).left.replace("px", "");
+
+                    document.querySelector("." + c).style.transition = "var(--transitionNormal)";
+                    document.querySelector("." + c).style.left = 0 + 'px';
+                    document.querySelector("." + c).style.top = 0 + 'px';
+                    document.querySelector("." + c).setAttribute("id", "fullscreenMode");
+                    document.querySelector(".maximizar" + count).classList.add("lock");
+                    document.querySelector(".minimizar" + count).classList.remove("lock");
+                } else { b++ }
+                a++
+            }
+        }
+        function esconder(event) {
+            let a = 0;
+            let b = 1;
+            while (a < b) {
+                if (event.composedPath()[a].classList[0] == "window") {
+                    let c = event.composedPath()[a].classList[1];
+                    document.querySelector("." + c).style.transition = "var(--transitionNormal)";
+                    document.querySelector("." + c).style.opacity = "0";
+                    document.querySelector("." + c).style.scale = "0";
+                    setTimeout(function () {
+                        document.querySelector("." + c).style.display = "none";
+                        document.querySelector("." + c).style.opacity = "1";
+                        document.querySelector("." + c).style.transition = "outline var(--transitionNormal)";
+                        document.querySelector("." + c).style.scale = "none";
+                    }, 150);
+                    let d = c.replace(/[^0-9]/g, '');
+                    document.querySelector(".ico" + d).style.filter = "saturate(0) brightness(.8)";
+                    document.querySelector(".ico" + d).classList.remove("icoSelected");
+                } else { b++ }
+                a++
+            }
+        }
+        /* Script - Arrastar */
+        function definirArrastavel(event, count) {
+            Dragable(document.querySelector("." + event), document.querySelector(".headDraggable" + count))
+        };
+
+        //Adiciona eventos pra navegadores modernos e antigos
+        function addEvent(el, type, callback) {
+            if (el.addEventListener) {
+                el.addEventListener(type, callback);
+            } else if (el.attachEvent) {
+                el.attachEvent("on" + type, callback);
+            }
+        }
+
+        function Dragable(el, areaArrastavel) {
+            var isMove = false, //Verifica se esta se movendo
+                x = 0, y = 0, //Pega as coordenadas do mouse
+                xel = 0, yel = 0; // ultima posição do elemento
+
+            addEvent(areaArrastavel, "mousedown", function (e) {
+                if (document.querySelector(".window").id != "fullscreenMode") {
+                    /* document.querySelector(".window").setAttribute("id", "windowMin");
+                    document.querySelector(".minimizar").classList.add("lock");
+                    document.querySelector(".maximizar").classList.remove("lock"); */
+
+                    isMove = true;
+
+                    el.className += " isMoving";
+
+                    x = window.event ? window.event.clientX : e.pageX;
+                    y = window.event ? window.event.clientY : e.pageY;
+
+                    xel = x - el.offsetLeft;
+                    yel = y - el.offsetTop;
+                }
+            });
+
+            addEvent(document, "mousemove", function (e) {
+                if (isMove) {
+                    e.preventDefault();
+                    const widthWindow = document.querySelector(".window").clientWidth;
+                    const heightWindow = document.querySelector(".window").clientHeight;
+                    const top = window.getComputedStyle(el).top.replace("px", "");
+                    const left = window.getComputedStyle(el).left.replace("px", "");
+
+                    const width = document.querySelector("body").clientWidth - widthWindow - 0;
+                    const height = document.querySelector("body").clientHeight - heightWindow - 44;
+
+                    x = window.event ? window.event.clientX : e.pageX;
+                    let testeLeft = (x - xel);
+
+                    if (testeLeft >= 0 && testeLeft <= width) {
+                        el.style.left = (x - xel) + 'px';
+                    } else if (testeLeft < 0) {
+                        el.style.left = 0;
+                    } else if (testeLeft > width) {
+                        el.style.left = width + "px";
+                    }
+
+                    y = window.event ? window.event.clientY : e.pageY;
+                    let testeTop = (y - yel);
+
+                    if (testeTop >= 0 && testeTop <= height) {
+                        el.style.top = (y - yel) + 'px';
+                    } else if (testeTop < 0) {
+                        el.style.top = 0;
+                    } else if (testeTop > height) {
+                        el.style.top = (height + 1) + "px";
+                    }
+                }
+            });
+
+            addEvent(document, "mouseup", function () {
+                el.className = String(el.className).replace(/(^|\s)isMoving(\s|$)/g, " ");
+                isMove = false;
+            });
+            addEvent(document, "mouseout", function () {
+
+            });
+        };
+    /* Script - Arrastar */
+    </script>
+
+</body>
+
+</html>
