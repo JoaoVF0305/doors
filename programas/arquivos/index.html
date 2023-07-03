@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<div class="body">
+    <header>
+        <div class="headDraggable" id="headDraggable"></div>
+        <nav class="allowTabs">
+            <section>
+                <img src="programas/arquivos/icon.png" class="windowIcon">
+                <label class="windowTab">
+                    <input type="radio" name="filesTabSelection" checked>
+                    <div class="checkTab"> </div>
+                    <img src="sistema/icons/home.png" class="monoIcon">
+                    <button title="Fechar aba" class="closeTab">
+                        <img src="sistema/icons/close.png" class="monoIcon">
+                    </button>
+                    <span> Início </span>
+                </label>
+                <label class="windowTab">
+                    <input type="radio" name="filesTabSelection">
+                    <div class="checkTab"> </div>
+                    <img src="sistema/icons/download.png" class="monoIcon">
+                    <button title="Fechar aba" class="closeTab">
+                        <img src="sistema/icons/close.png" class="monoIcon">
+                    </button>
+                    <span> Downloads </span>
+                </label>
+                <button class="buttonArea" title="Nova aba" id="arquivos" onclick="createWindow(event)">
+                    <img src="sistema/icons/more.png" class="monoIcon">
+                </button>
+            </section>
+            <section>
+                <button class="buttonArea" title="Sempre no topo">
+                    <img src="sistema/icons/pin.png" class="monoIcon">
+                </button>
+                <button class="buttonArea esconder" title="Ocultar">
+                    <img src="sistema/icons/arrow/longBottom.png" class="monoIcon">
+                </button>
+                <button class="buttonArea minimizar lock" title="Minimizar">
+                    <img src="sistema/icons/arrow/longBottomLeft.png" class="monoIcon">
+                </button>
+                <button class="buttonArea maximizar" title="Maximizar">
+                    <img src="sistema/icons/arrow/longTopRight.png" class="monoIcon">
+                </button>
+                <button class="buttonArea closeWindow" id="closeWindow" title="Fechar">
+                    <img src="sistema/icons/close.png" class="monoIcon">
+                </button>
+            </section>
+        </nav>
+        <nav>
+            <section>
+                <label class="buttonArea" title="Menu lateral">
+                    <input type="checkbox" checked>
+                    <img src="sistema/icons/leftMenu.png" class="monoIcon">
+                    <div class="checkBox"></div>
+                </label>
+                <button class="buttonArea" title="Voltar">
+                    <img src="sistema/icons/arrow/simpleLeft.png" class="monoIcon disabled">
+                </button>
+                <button class="buttonArea" title="Avançar">
+                    <img src="sistema/icons/arrow/simpleRight.png" class="monoIcon disabled">
+                </button>
+            </section>
+            <form class="addressForm">
+                <button class="buttonArea inputLeftButton" title="Voltar uma pasta">
+                    <img src="sistema/icons/arrow/longTop.png" class="monoIcon">
+                </button>
+                <input type="text" value="início/" placeholder=":3//">
+                <button class="buttonArea inputRightButton" title="Copiar caminho">
+                    <img src="sistema/icons/network/path.png" class="monoIcon">
+                </button>
+            </form>
+            <section>
+                <form class="searchForm">
+                    <input type="text" placeholder="localizar">
+                    <button class="buttonArea inputRightButton" title="Limpar pesquisa"
+                        onclick="document.getElementById('fileSearch').value=''">
+                        <img src="sistema/icons/backspace.png" class="monoIcon">
+                    </button>
+                </form>
+                <button class="buttonArea" title="Mais ações">
+                    <img src="sistema/icons/menu.png" class="monoIcon">
+                </button>
+            </section>
+        </nav>
+        <nav>
+            <section>
+                <div class="dropdownMenu topLeftStart">
+                    <button class="buttonArea">
+                        <img src="sistema/icons/more.png" class="monoIcon">
+                        <span> Criar </span>
+                    </button>
+                    <ul>
+                        <h1> Criar </h1>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/folder.png" class="monoIcon">
+                                <span> Pasta </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/file.png" class="monoIcon">
+                                <span> Genérico </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/files/txt.png">
+                                <span> Texto </span>
+                            </button>
+                        </li>
+                        <hr>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/files/excel.png">
+                                <span> Excel </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/files/pwp.png">
+                                <span> PowerPoint </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/files/Word.png">
+                                <span> Word </span>
+                            </button>
+                        </li>
+                        <hr>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/files/docs.png">
+                                <span> Docs </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/files/Plains.png">
+                                <span> Plains </span>
+                            </button>
+                        </li>
+                        <hr>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/files/css.png">
+                                <span> CSS </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/files/generic.png">
+                                <span> HTML </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/files/js.png">
+                                <span> JS </span>
+                            </button>
+                        </li>
+                        <hr>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/files/illustrator.png">
+                                <span> Adobe Illustrator </span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <button class="buttonArea desfazer" title="Desfazer">
+                    <img src="sistema/icons/arrow/rotateLeft.png" class="monoIcon disabled">
+                </button>
+                <button class="buttonArea refazer" title="Refazer">
+                    <img src="sistema/icons/arrow/rotateRight.png" class="monoIcon disabled">
+                </button>
+                <div class="dropdownMenu topLeftStart">
+                    <button class="buttonArea" title="Filtrar">
+                        <img src="sistema/icons/filter.png" class="monoIcon">
+                    </button>
+                    <ul>
+                        <h1> Filtrar </h1>
+<!--                         <li>
+                            <label class="dropdownItem">
+                                <input type="checkbox" name="filesFilterSelection" checked>
+                                <img src="sistema/icons/map.png" class="monoIcon">
+                                <span> Todos </span>
+                                <div class="checkmark">
+                                    <img src="sistema/icons/close.png" class="monoIcon unchecked">
+                                    <img src="sistema/icons/apply.png" class="checked">    
+                               </div>
+                            </label>
+                        </li>
+ -->                        <li>
+                            <label class="dropdownItem">
+                                <img src="sistema/icons/folder.png" class="monoIcon">
+                                <span> Pastas </span>
+                                <input type="checkbox" name="filesFilterSelection" checked>
+                                <div class="checkmark">
+                                    <img src="sistema/icons/close.png" class="monoIcon unchecked">
+                                    <img src="sistema/icons/apply.png" class="checked">    
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="dropdownItem">
+                                <img src="sistema/icons/file.png" class="monoIcon">
+                                <span> Arquivos </span>
+                                <input type="checkbox" name="filesFilterSelection" checked>
+                                <div class="checkmark">
+                                    <img src="sistema/icons/close.png" class="monoIcon unchecked">
+                                    <img src="sistema/icons/apply.png" class="checked">    
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdownMenu topLeftStart">
+                    <button class="buttonArea" title="Visualizar">
+                        <img src="sistema/icons/view/grid.png" class="monoIcon">
+                    </button>
+                    <ul>
+                        <h1> Visualizar </h1>
+                        <li>
+                            <label class="dropdownItem">
+                                <input type="radio" name="filesViewSelection">
+                                <img src="sistema/icons/view/grid.png" class="monoIcon">
+                                <span> Grade </span>
+                                <div class="checkRadio"> </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="dropdownItem">
+                                <input type="radio" name="filesViewSelection" checked>
+                                <img src="sistema/icons/view/list.png" class="monoIcon">
+                                <span> Lista </span>
+                                <div class="checkRadio"> </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdownMenu topLeftStart">
+                    <button class="buttonArea" title="Ordenar">
+                        <img src="sistema/icons/arrow/swap.png" class="monoIcon">
+                    </button>
+                    <ul>
+                        <h1> Ordenar </h1>
+                        <li>
+                            <label class="dropdownItem">
+                                <input type="radio" name="filesOrderSelection" checked>
+                                <img src="sistema/icons/orderAZ.png" class="monoIcon">
+                                <span> Crescente </span>
+                                <div class="checkRadio"> </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="dropdownItem">
+                                <input type="radio" name="filesOrderSelection">
+                                <img src="sistema/icons/orderZA.png" class="monoIcon">
+                                <span> Decrescente </span>
+                                <div class="checkRadio"> </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="dropdownItem" title="Habilitado">
+                                <input type="radio" name="filesOrderSelection">
+                                <img src="sistema/icons/clock.png" class="monoIcon">
+                                <span> Recente </span>
+                                <div class="checkRadio"> </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="dropdownItem">
+                                <input type="radio" name="filesOrderSelection">
+                                <img src="sistema/icons/clock.png" class="monoIcon">
+                                <span> Antigo </span>
+                                <div class="checkRadio"> </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="dropdownItem">
+                                <input type="radio" name="filesOrderSelection">
+                                <img src="sistema/icons/weight.png" class="monoIcon">
+                                <span> Pesado </span>
+                                <div class="checkRadio"> </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="dropdownItem">
+                                <input type="radio" name="filesOrderSelection">
+                                <img src="sistema/icons/weight2.png" class="monoIcon">
+                                <span> Leve </span>
+                                <div class="checkRadio"> </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <button class="buttonArea disabled" title="Duplicar">
+                    <img src="sistema/icons/duplicate.png" class="monoIcon">
+                </button>
+                <button class="buttonArea disabled" title="Copiar">
+                    <img src="sistema/icons/copy.png" class="monoIcon">
+                </button>
+                <button class="buttonArea disabled" title="Colar">
+                    <img src="sistema/icons/paste.png" class="monoIcon">
+                </button>
+                <button class="buttonArea disabled" title="Recortar">
+                    <img src="sistema/icons/cut.png" class="monoIcon">
+                </button>
+                <hr>
+                <div class="dropdownMenu topRightStart">
+                    <button class="buttonArea disabled" title="Compactar">
+                        <img src="sistema/icons/compact.png" class="monoIcon">
+                    </button>
+                    <ul>
+                        <h1> Compactar </h1>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="" class="monoIcon">
+                                <span> WinZip </span>
+                                <span> .zip </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="" class="monoIcon">
+                                <span> Seven Zip </span>
+                                <span> .7z </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="" class="monoIcon">
+                                <span> WinRAR </span>
+                                <span> .rar </span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdownMenu topRightStart">
+                    <button class="buttonArea disabled" title="Empacotar">
+                        <img src="sistema/icons/pack/box.png" class="monoIcon">
+                    </button>
+                    <ul>
+                        <h1> Empacotar </h1>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/pack/pack.png" class="monoIcon">
+                                <span> Empacotar </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/pack/unpack.png" class="monoIcon">
+                                <span> Desempacotar </span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <button class="buttonArea disabled" title="Compartilhar">
+                    <img src="sistema/icons/share.png" class="monoIcon">
+                </button>
+                <button class="buttonArea disabled" title="Fixar">
+                    <img src="sistema/icons/pin.png" class="monoIcon">
+                </button>
+            </section>
+        </nav>
+    </header>
+     <main class="allowAside">
+        <aside>
+            <section>
+                <ul>
+                    <li>
+                        <label>
+                            <input type="radio" name="filesSelection" checked>
+                            <div class="checkBar"> </div>
+                            <img src="sistema/icons/home.png" class="monoIcon">
+                            <span> Início </span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="filesSelection">
+                            <div class="checkBar"> </div>
+                            <img src="sistema/icons/download.png" class="monoIcon">
+                            <span> Downloads </span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="filesSelection">
+                            <div class="checkBar"> </div>
+                            <img src="sistema/icons/file.png" class="monoIcon">
+                            <span> Documentos </span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="filesSelection">
+                            <div class="checkBar"> </div>
+                            <img src="sistema/icons/photo.png" class="monoIcon">
+                            <span> Fotos </span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="filesSelection">
+                            <div class="checkBar"> </div>
+                            <img src="sistema/icons/video.png" class="monoIcon">
+                            <span> Video </span>
+                        </lab>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="filesSelection">
+                            <div class="checkBar"> </div>
+                            <img src="sistema/icons/music.png" class="monoIcon">
+                            <span> Músicas </span>
+                        </label>
+                    </li>
+                    <li>
+                        <label onclick="createWindow(event)" id="lixeira">
+                            <input type="radio" name="filesSelection">
+                            <div class="checkBar"> </div>
+                            <img src="sistema/icons/trashcam.png" class="monoIcon">
+                            <span> Lixeira </span>
+                        </lab>
+                    </li>
+                </ul>
+                <hr>
+                <ul>
+                    <li>
+                        <label>
+                            <img src="sistema/icons/monitor.png" class="monoIcon">
+                            <span> Computador </span>
+                            <input type="radio" name="filesSelection">
+                            <div class="checkBar"> </div>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <img src="sistema/icons/network/root.png" class="monoIcon">
+                            <span> Servidor </span>
+                            <input type="radio" name="filesSelection">
+                            <div class="checkBar"> </div>
+                        </label>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+        <section>
+            <div class="page Início active">
+                <ul>
+                    <li>
+                        <button class="inUse">
+                            <img src="sistema/icons/home.png" class="monoIcon">
+                            <span> Início </span>
+                        </button>
+                    </li>
+                    <li>
+                        <button>
+                            <img src="sistema/icons/download.png" class="monoIcon">
+                            <span> Downloads </span>
+                        </button>
+                    </li>
+                    <li>
+                        <button>
+                            <img src="sistema/icons/file.png" class="monoIcon">
+                            <span> Documentos </span>
+                        </button>
+                    </li>
+                    <li>
+                        <button>
+                            <img src="sistema/icons/photo.png" class="monoIcon">
+                            <span> Fotos </span>
+                        </button>
+                    </li>
+                    <li>
+                        <button>
+                            <img src="sistema/icons/video.png" class="monoIcon">
+                            <span> Video </span>
+                        </button>
+                    </li>
+                    <li>
+                        <button>
+                            <img src="sistema/icons/music.png" class="monoIcon">
+                            <span> Músicas </span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="createWindow(event)" id="lixeira">
+                            <img src="sistema/icons/trashcam.png" class="monoIcon">
+                            <span> Lixeira </span>
+                        </button>
+                    </li>
+                </ul>
+                <hr>
+                <ul>
+                    <li>
+                        <button>
+                            <img src="sistema/icons/monitor.png" class="monoIcon">
+                            <span> Computador </span>
+                        </button>
+                    </li>
+                    <li>
+                        <button>
+                            <img src="sistema/icons/network/root.png" class="monoIcon">
+                            <span> Servidor </span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="page Downloads"></div>
+            <div class="page Documentos"></div>
+            <div class="page Fotos"></div>
+            <div class="page Video"></div>
+            <div class="page Músicas"></div>
+        </section>
+    </main>
+</div>
+
+</html>
