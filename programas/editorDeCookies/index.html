@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<div class="body">
+    <header>
+        <div class="headDraggable" id="headDraggable"></div>
+        <nav>
+            <section>
+                <img src="programas/editorDeCookies/icon.png" class="windowIcon">
+                <h1 class="windowTitle"> Editor de Cookies </h1>
+            </section>
+            <section>
+                <button class="buttonArea" title="Sempre no topo">
+                    <img src="sistema/icons/pin.png" class="monoIcon">
+                </button>
+                <button class="buttonArea esconder" title="Ocultar">
+                    <img src="sistema/icons/arrow/longBottom.png" class="monoIcon">
+                </button>
+                <button class="buttonArea minimizar lock" title="Minimizar">
+                    <img src="sistema/icons/arrow/longBottomLeft.png" class="monoIcon">
+                </button>
+                <button class="buttonArea maximizar" title="Maximizar">
+                    <img src="sistema/icons/arrow/longTopRight.png" class="monoIcon">
+                </button>
+                <button class="buttonArea closeWindow" id="closeWindow" title="Fechar">
+                    <img src="sistema/icons/close.png" class="monoIcon">
+                </button>
+            </section>
+        </nav>
+        <nav>
+            <section>
+                <label class="buttonArea" title="Menu lateral">
+                    <input type="checkbox" checked>
+                    <img src="sistema/icons/leftMenu.png" class="monoIcon">
+                    <div class="checkBox"></div>
+                </label>
+                <button class="buttonArea apply" title="Aplicar mudanças">
+                    <span> Aplicar </span>
+                </button>
+                <button class="buttonArea clearAll" title="Apagar para sempre">
+                    <img alt=" " src="sistema/icons/data/cleanData.png" class="monoIcon">
+                    <span> Limpar tudo </span>
+                </button>
+                <button class="buttonArea undoAll" title="Restaurar tudo">
+                    <img alt=" " src="sistema/icons/data/restoreData.png" class="monoIcon">
+                    <span> Recuperar </span>
+                </button>
+            </section>
+            <section>
+                <form class="searchForm">
+                    <input type="text" placeholder="localizar" class="searchBar" id="trashcamSearch">
+                    <button class="buttonArea inputRightButton" title="Limpar pesquisa"
+                        onclick="document.getElementById('trashcamSearch').value=''">
+                        <img src="sistema/icons/backspace.png" class="monoIcon">
+                    </button>
+                </form>
+            </section>
+    </header>
+    <main class="allowAside">
+        <aside>
+            <section>
+                <ul>
+                    <li>
+                        <label>
+                            <img src="sistema/icons/user/profile.png">
+                            <span> usuário 1 </span>
+                            <input type="radio">
+                            <div class="checkBar"></div>
+                        </label>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+        <!-- exemplo de layout -->
+        <section>
+            <dl>
+                <dt> bg </dt> <!-- título do cookie -->
+                <dd>
+                    <input type="text" class="addressBar"> <!-- valor do cookie -->
+                    <button title="Apagar cookie" class="buttonArea"> <!-- botão de apagar o valor -->
+                        <img src="sistema/icons/data/cleanData.png" class="monoIcon">
+                    </button>
+                    <button title="Restaurar cookie" class="buttonArea"> <!-- botão de restaurar o valor -->
+                        <img src="sistema/icons/data/restoreData.png" class="monoIcon">
+                    </button>
+                </dd>
+                <dt> themeColor </dt>
+                <dd>
+                    <input type="text" class="addressBar">
+                    <button title="Apagar cookie" class="buttonArea">
+                        <img src="sistema/icons/data/cleanData.png" class="monoIcon">
+                    </button>
+                    <button title="Restaurar cookie" class="buttonArea">
+                        <img src="sistema/icons/data/restoreData.png" class="monoIcon">
+                    </button>
+                </dd>
+                <dt> userName </dt>
+                <dd>
+                    <input type="text" class="addressBar">
+                    <button title="Apagar cookie" class="buttonArea">
+                        <img src="sistema/icons/data/cleanData.png" class="monoIcon">
+                    </button>
+                    <button title="Restaurar cookie" class="buttonArea">
+                        <img src="sistema/icons/data/restoreData.png" class="monoIcon">
+                    </button>
+                </dd>
+                <dt> theme </dt>
+                <dd>
+                    <input type="text" class="addressBar">
+                    <button title="Apagar cookie" class="buttonArea">
+                        <img src="sistema/icons/data/cleanData.png" class="monoIcon">
+                    </button>
+                    <button title="Restaurar cookie" class="buttonArea">
+                        <img src="sistema/icons/data/restoreData.png" class="monoIcon">
+                    </button>
+                </dd>
+            </dl>
+        </section>
+    </main>
+</div>
+<!-- informações
+
+flexList - conteúdo da <li> fica visível na horizontal
+
+-->
+
+</html>
