@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<div class="body">
+    <header>
+        <div class="headDraggable" id="headDraggable"></div>
+        <nav>
+            <section>
+                <img src="programas/lixeira/icon.png" class="windowIcon">
+                <h1 class="windowTitle"> Lixeira </h1>
+            </section>
+            <section>
+                <button class="buttonArea" title="Sempre no topo">
+                    <img src="sistema/icons/pin.png" class="monoIcon">
+                </button>
+                <button class="buttonArea esconder" title="Ocultar">
+                    <img src="sistema/icons/arrow/longBottom.png" class="monoIcon">
+                </button>
+                <button class="buttonArea minimizar lock" title="Minimizar">
+                    <img src="sistema/icons/arrow/longBottomLeft.png" class="monoIcon">
+                </button>
+                <button class="buttonArea maximizar" title="Maximizar">
+                    <img src="sistema/icons/arrow/longTopRight.png" class="monoIcon">
+                </button>
+                <button class="buttonArea closeWindow" id="closeWindow" title="Fechar">
+                    <img src="sistema/icons/close.png" class="monoIcon">
+                </button>
+            </section>
+        </nav>
+        <nav>
+            <section>
+                <button class="buttonArea" title="Apagar para sempre">
+                    <img alt=" " src="sistema/icons/fire.png" class="monoIcon">
+                    <span> Queimar </span>
+                </button>
+                <button class="buttonArea" title="Restaurar tudo">
+                    <img alt=" " src="sistema/icons/arrow/rotateLeft.png" class="monoIcon">
+                    <span> Recuperar </span>
+                </button>
+                <hr>
+                <div class="dropdownMenu topLeftStart">
+                    <button class="buttonArea" title="Filtrar">
+                        <img src="sistema/icons/filter.png" class="monoIcon">
+                    </button>
+                    <ul>
+                        <h1> Filtrar </h1>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="" class="monoIcon">
+                                <span> Todos </span>
+                                <img src="sistema/icons/apply.png" class="monoIcon">
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/folder.png" class="monoIcon">
+                                <span> Pastas </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/file.png" class="monoIcon">
+                                <span> Arquivos </span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdownMenu topLeftStart">
+                    <button class="buttonArea" title="Visualizar">
+                        <img src="sistema/icons/view/grid.png" class="monoIcon">
+                    </button>
+                    <ul>
+                        <h1> Visualizar </h1>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/view/grid.png" class="monoIcon">
+                                <span> Grade </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/view/list.png" class="monoIcon">
+                                <span> Lista </span>
+                                <img src="sistema/icons/apply.png" class="monoIcon">
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdownMenu topLeftStart">
+                    <button class="buttonArea" title="Ordenar">
+                        <img src="sistema/icons/arrow/swap.png" class="monoIcon">
+                    </button>
+                    <ul>
+                        <h1> Ordenar </h1>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/orderAZ.png" class="monoIcon">
+                                <span> Crescente </span>
+                                <img src="" class="monoIcon">
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/orderZA.png" class="monoIcon">
+                                <span> Decrescente </span>
+                                <img src="" class="monoIcon">
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdownItem" title="Habilitado">
+                                <img src="sistema/icons/clock.png" class="monoIcon">
+                                <span> Recente </span>
+                                <img src="sistema/icons/apply.png" class="monoIcon">
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/clock.png" class="monoIcon">
+                                <span> Antigo </span>
+                                <img src="" class="monoIcon">
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/weight.png" class="monoIcon">
+                                <span> Pesado </span>
+                                <img src="" class="monoIcon">
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdownItem">
+                                <img src="sistema/icons/weight2.png" class="monoIcon">
+                                <span> Leve </span>
+                                <img src="" class="monoIcon">
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <form class="searchForm">
+                    <input type="text" placeholder="localizar">
+                    <button class="buttonArea inputRightButton" title="Limpar pesquisa"
+                        onclick="document.getElementById('trashcamSearch').value=''">
+                        <img src="sistema/icons/backspace.png" class="monoIcon">
+                    </button>
+                </form>
+                <button class="buttonArea" title="Mais ações">
+                    <img src="sistema/icons/menu.png" class="monoIcon">
+                </button>
+            </section>
+        </nav>
+    </header>
+    <main>
+        <section class="mainContent">
+            <span class="alert"> Lixeira vazia </span>
+        </section>
+    </main>
+</div>
+
+</html>
