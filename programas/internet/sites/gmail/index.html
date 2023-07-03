@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <input type="checkbox" name="navResizer" id="navResizer">
+    <input type="checkbox" name="headerResizer" id="headerResizer">
+    <header>
+        <header>
+            <a href="index.html" title="Início" class="logo">
+                <img src="icon.png" alt="Gmail">
+                <span>Gmail</span>
+            </a>
+        </header>
+        <section>
+            <ul>
+                <li>
+                    <input type="radio" name="global" id="goToMail" checked>
+                    <label for="goToMail" title="email">
+                        <span class="material-symbols-outlined">mail</span>
+                        <span>E-Mail</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="global" id="goToContacts">
+                    <label for="goToContacts" title="contatos">
+                        <span class="material-symbols-outlined">contacts</span>
+                        <span>Contatos</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="global" id="goToCalendar">
+                    <label for="goToCalendar" title="calendário">
+                        <span class="material-symbols-outlined">calendar_month</span>
+                        <span>calendário</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="global" id="goToChat">
+                    <label for="goToChat" title="chats">
+                        <span class="material-symbols-outlined">chat</span>
+                        <span>Chat</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="global" id="goToGroups">
+                    <label for="goToGroups" title="grupos">
+                        <span class="material-symbols-outlined">group</span>
+                        <span>Grupos</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="global" id="goToMeet">
+                    <label for="goToMeet" title="Meet">
+                        <span class="material-symbols-outlined">videocam</span>
+                        <span>Meet</span>
+                    </label>
+                </li>
+            </ul>
+            <ul>
+                <hr>
+                <li>
+                    <input type="radio" name="global" id="goToApps">
+                    <label for="goToApps" title="Aplicativos">
+                        <span class="material-symbols-outlined">apps</span>
+                        <span>Aplicativos</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="global" id="goToSettings">
+                    <label for="goToSettings" title="Configurações">
+                        <span class="material-symbols-outlined">settings</span>
+                        <span>Configurações</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="global" id="goToProfile">
+                    <label for="goToProfile" title="Perfil">
+                        <span class="material-symbols-outlined">person</span>
+                        <span>Perfil</span>
+                    </label>
+                </li>
+            </ul>
+        </section>
+        <footer>
+            <ul>
+                <li>
+                    <label for="headerResizer" id="navDoisLabel"><span
+                            class="material-symbols-outlined">keyboard_arrow_left</span></label>
+                </li>
+            </ul>
+        </footer>
+    </header>
+    <nav>
+        <header>
+            <button id="write" title="escrever">
+                <span class="material-symbols-outlined">edit</span>
+                <span>escrever</span>
+            </button>
+        </header>
+        <section>
+            <ul>
+                <li>
+                    <input type="radio" name="local" id="goToHome" checked>
+                    <label for="goToHome">
+                        <span class="material-symbols-outlined">inbox</span>
+                        <span>inbox</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="local" id="goToImportant">
+                    <label for="goToImportant">
+                        <span class="material-symbols-outlined">label_important</span>
+                        <span>importante</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="local" id="goToFavorite">
+                    <label for="goToFavorite">
+                        <span class="material-symbols-outlined">star</span>
+                        <span>Favoritos</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="local" id="goToArchive">
+                    <label for="goToArchive">
+                        <span class="material-symbols-outlined">archive</span>
+                        <span>Arquivo</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="local" id="goToSpam">
+                    <label for="goToSpam">
+                        <span class="material-symbols-outlined">report</span>
+                        <span>Spam</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="local" id="goToTrashbin">
+                    <label for="goToTrashbin">
+                        <span class="material-symbols-outlined">delete</span>
+                        <span>Lixeira</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="local" id="goToPromo">
+                    <label for="goToPromo" title="promoções">
+                        <span class="material-symbols-outlined">sell</span>
+                        <span>Promoções</span>
+                    </label>
+                </li>
+                <hr>
+                <li>
+                    <input type="radio" name="local" id="goToSend">
+                    <label for="goToSend">
+                        <span class="material-symbols-outlined">send</span>
+                        <span>Enviados</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="local" id="goToSchedule">
+                    <label for="goToSchedule">
+                        <span class="material-symbols-outlined">schedule_send</span>
+                        <span>Programados</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="local" id="goToSketch">
+                    <label for="goToSketch">
+                        <span class="material-symbols-outlined">draft</span>
+                        <span>Rascunho</span>
+                    </label>
+                </li>
+            </ul>
+        </section>
+        <footer>
+            <ul>
+                <li>
+                    <label for="navResizer" id="navUmLabel"><span
+                            class="material-symbols-outlined">keyboard_arrow_left</span></label>
+                </li>
+            </ul>
+        </footer>
+    </nav>
+    <main>
+        <header>
+            <div>
+                <div class="dropdown">
+                    <label>
+                        <input type="checkbox" class="material-symbols-outlined">
+                    </label>
+                    <button class="material-symbols-outlined">arrow_drop_down</button>
+                </div>
+                <button class="material-symbols-outlined" title="atualizar">refresh</button>
+                <button class="material-symbols-outlined" title="reportar" disabled>report</button>
+                <button class="material-symbols-outlined" title="bloquear" disabled>block</button>
+                <button class="material-symbols-outlined" title="favoritar" disabled>star</button>
+                <button class="material-symbols-outlined" title="arquivar" disabled>archive</button>
+                <button class="material-symbols-outlined" title="apagar" disabled>delete</button>
+                <button class="material-symbols-outlined" title="Mais">more_vert</button>
+                <hr>
+            </div>
+            <div>
+                <button class="material-symbols-outlined" title="ordenar">sort</button>
+                <button class="material-symbols-outlined" title="filtrar">filter_list</button>
+                <button class="material-symbols-outlined" title="visualizar">view_list</button>
+                <form action="">
+                    <input type="submit" class="material-symbols-outlined" value="search" title="buscar">
+                    <input type="search" name="" id="aaa" placeholder="Encontrar">
+                    <input type="reset" class="material-symbols-outlined" value="close" title="limpar">
+                </form>
+            </div>
+        </header>
+        <section>
+            <div class="email unread">
+                <input type="checkbox" class="material-symbols-outlined" name="email" id="email1">
+                <div class="container" draggable="true">
+                    <label for="email1" class="material-symbols-outlined check"></label>
+                    <a href="">
+                        <span class="user material-symbols-outlined">person</span>
+                        <span class="email">user@mail.domain</span>
+                    </a>
+                    <span class="message">placeholder</span>
+                    <span class="time">19:24 20 mar. 23</span>
+                    <button class="material-symbols-outlined reply" title="responder">send</button>
+                </div>
+            </div>
+            <div class="email">
+                <input type="checkbox" class="material-symbols-outlined" name="email" id="email2">
+                <div class="container" draggable="true">
+                    <label for="email2" class="material-symbols-outlined check"></label>
+                    <a href="">
+                        <span class="user material-symbols-outlined">person</span>
+                        <span class="email">user@mail.domain</span>
+                    </a>
+                    <span class="message">placeholder</span>
+                    <span class="time">19:24 20 mar. 23</span>
+                    <button class="material-symbols-outlined reply" title="responder">send</button>
+                </div>
+            </div>
+            <div class="email unread">
+                <input type="checkbox" class="material-symbols-outlined" name="email" id="email3">
+                <div class="container" draggable="true">
+                    <label for="email3" class="material-symbols-outlined check"></label>
+                    <a href="">
+                        <span class="user material-symbols-outlined">person</span>
+                        <span class="email">user@mail.domain</span>
+                    </a>
+                    <span class="message">placeholder</span>
+                    <span class="time">19:24 20 mar. 23</span>
+                    <button class="material-symbols-outlined reply" title="responder">send</button>
+                </div>
+            </div>
+            <div class="email unread">
+                <input type="checkbox" class="material-symbols-outlined" name="email" id="email4">
+                <div class="container" draggable="true">
+                    <label for="email4" class="material-symbols-outlined check"></label>
+                    <a href="">
+                        <span class="user material-symbols-outlined">person</span>
+                        <span class="email">user@mail.domain</span>
+                    </a>
+                    <span class="message">placeholder</span>
+                    <span class="time">19:24 20 mar. 23</span>
+                    <button class="material-symbols-outlined reply" title="responder">send</button>
+                </div>
+            </div>
+            <div class="email unread">
+                <input type="checkbox" class="material-symbols-outlined" name="email" id="email5">
+                <div class="container" draggable="true">
+                    <label for="email5" class="material-symbols-outlined check"></label>
+                    <a href="">
+                        <span class="user material-symbols-outlined">person</span>
+                        <span class="email">user@mail.domain</span>
+                    </a>
+                    <span class="message">placeholder</span>
+                    <span class="time">19:24 20 mar. 23</span>
+                    <button class="material-symbols-outlined reply" title="responder">send</button>
+                </div>
+            </div>
+            <div class="email">
+                <input type="checkbox" class="material-symbols-outlined" name="email" id="email6">
+                <div class="container" draggable="true">
+                    <label for="email6" class="material-symbols-outlined check"></label>
+                    <a href="">
+                        <span class="user material-symbols-outlined">person</span>
+                        <span class="email">user@mail.domain</span>
+                    </a>
+                    <span class="message">placeholder</span>
+                    <span class="time">19:24 20 mar. 23</span>
+                    <button class="material-symbols-outlined reply" title="responder">send</button>
+                </div>
+            </div>
+            <div class="email">
+                <input type="checkbox" class="material-symbols-outlined" name="email" id="email7">
+                <div class="container" draggable="true">
+                    <label for="email7" class="material-symbols-outlined check"></label>
+                    <a href="">
+                        <span class="user material-symbols-outlined">person</span>
+                        <span class="email">user@mail.domain</span>
+                    </a>
+                    <span class="message">placeholder</span>
+                    <span class="time">19:24 20 mar. 23</span>
+                    <button class="material-symbols-outlined reply" title="responder">send</button>
+                </div>
+            </div>
+            <div class="email unread">
+                <input type="checkbox" class="material-symbols-outlined" name="email" id="email8">
+                <div class="container" draggable="true">
+                    <label for="email8" class="material-symbols-outlined check"></label>
+                    <a href="">
+                        <span class="user material-symbols-outlined">person</span>
+                        <span class="email">user@mail.domain</span>
+                    </a>
+                    <span class="message">placeholder</span>
+                    <span class="time">19:24 20 mar. 23</span>
+                    <button class="material-symbols-outlined reply" title="responder">send</button>
+                </div>
+            </div>
+            <div class="email unread">
+                <input type="checkbox" class="material-symbols-outlined" name="email" id="email9">
+                <div class="container" draggable="true">
+                    <label for="email9" class="material-symbols-outlined check"></label>
+                    <a href="">
+                        <span class="user material-symbols-outlined">person</span>
+                        <span class="email">user@mail.domain</span>
+                    </a>
+                    <span class="message">placeholder</span>
+                    <span class="time">19:24 20 mar. 23</span>
+                    <button class="material-symbols-outlined reply" title="responder">send</button>
+                </div>
+            </div>
+            <div class="email unread">
+                <input type="checkbox" class="material-symbols-outlined" name="email" id="email10">
+                <div class="container" draggable="true">
+                    <label for="email10" class="material-symbols-outlined check"></label>
+                    <a href="">
+                        <span class="user material-symbols-outlined">person</span>
+                        <span class="email">user@mail.domain</span>
+                    </a>
+                    <span class="message">placeholder</span>
+                    <span class="time">19:24 20 mar. 23</span>
+                    <button class="material-symbols-outlined reply" title="responder">send</button>
+                </div>
+            </div>
+            <div class="email">
+                <input type="checkbox" class="material-symbols-outlined" name="email" id="email11">
+                <div class="container" draggable="true">
+                    <label for="email11" class="material-symbols-outlined check"></label>
+                    <a href="">
+                        <span class="user material-symbols-outlined">person</span>
+                        <span class="email">user@mail.domain</span>
+                    </a>
+                    <span class="message">placeholder</span>
+                    <span class="time">19:24 20 mar. 23</span>
+                    <button class="material-symbols-outlined reply" title="responder">send</button>
+                </div>
+            </div>
+            <div class="email">
+                <input type="checkbox" class="material-symbols-outlined" name="email" id="email12">
+                <div class="container" draggable="true">
+                    <label for="email12" class="material-symbols-outlined check"></label>
+                    <a href="">
+                        <span class="user material-symbols-outlined">person</span>
+                        <span class="email">user@mail.domain</span>
+                    </a>
+                    <span class="message">placeholder</span>
+                    <span class="time">19:24 20 mar. 23</span>
+                    <button class="material-symbols-outlined reply" title="responder">send</button>
+                </div>
+            </div>
+            <div class="email">
+                <input type="checkbox" class="material-symbols-outlined" name="email" id="email13">
+                <div class="container" draggable="true">
+                    <label for="email13" class="material-symbols-outlined check"></label>
+                    <a href="">
+                        <span class="user material-symbols-outlined">person</span>
+                        <span class="email">user@mail.domain</span>
+                    </a>
+                    <span class="message">placeholder</span>
+                    <span class="time">19:24 20 mar. 23</span>
+                    <button class="material-symbols-outlined reply" title="responder">send</button>
+                </div>
+            </div>
+            <div class="email">
+                <input type="checkbox" class="material-symbols-outlined" name="email" id="email14">
+                <div class="container" draggable="true">
+                    <label for="email14" class="material-symbols-outlined check"></label>
+                    <a href="">
+                        <span class="user material-symbols-outlined">person</span>
+                        <span class="email">user@mail.domain</span>
+                    </a>
+                    <span class="message">placeholder</span>
+                    <span class="time">19:24 20 mar. 23</span>
+                    <button class="material-symbols-outlined reply" title="responder">send</button>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div>
+                <a href="" class="progress" title="Armazenamento">
+                    <span class="material-symbols-outlined">storage</span>
+                    <div href=""> 1,08 GB de 15 GB usado(s)</div>
+                    <progress value="15" max="100"></progress>
+                </a>
+            </div>
+            <div>
+                <div class="info">
+                    <a href="">termos</a>
+                    <hr>
+                    <a href="">privacidade</a>
+                    <hr>
+                    <a href="">regulamentos</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
