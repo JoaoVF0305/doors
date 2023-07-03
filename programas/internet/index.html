@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<style>
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+<div class="body">
+    <header>
+        <div class="headDraggable" id="headDraggable"></div>
+        <nav class="allowTabs">
+            <section>
+                <img src="programas/internet/icon.png" class="windowIcon">
+                <label class="windowTab">
+                    <input type="radio" name="internetTabSelection" checked>
+                    <div class="checkTab"> </div>
+                    <img src="sistema/icons/home.png" class="monoIcon">
+                    <button title="Fechar aba" class="closeTab">
+                        <img src="sistema/icons/close.png" class="monoIcon">
+                    </button>
+                    <span> Início </span>
+                </label>
+                <label class="windowTab">
+                    <input type="radio" name="internetTabSelection">
+                    <div class="checkTab"> </div>
+                    <img src="sistema/icons/find.png" class="monoIcon">
+                    <button title="Fechar aba" class="closeTab">
+                        <img src="sistema/icons/close.png" class="monoIcon">
+                    </button>
+                    <span> gluglou </span>
+                </label>
+                <button class="buttonArea" title="Nova aba" id="arquivos" onclick="createWindow(event)">
+                    <img src="sistema/icons/more.png" class="monoIcon">
+                </button>
+            </section>
+            <section>
+                <button class="buttonArea" title="Sempre no topo">
+                    <img src="sistema/icons/pin.png" class="monoIcon">
+                </button>
+                <button class="buttonArea esconder" title="Ocultar">
+                    <img src="sistema/icons/arrow/longBottom.png" class="monoIcon">
+                </button>
+                <button class="buttonArea minimizar lock" title="Minimizar">
+                    <img src="sistema/icons/arrow/longBottomLeft.png" class="monoIcon">
+                </button>
+                <button class="buttonArea maximizar" title="Maximizar">
+                    <img src="sistema/icons/arrow/longTopRight.png" class="monoIcon">
+                </button>
+                <button class="buttonArea closeWindow" id="closeWindow" title="Fechar">
+                    <img src="sistema/icons/close.png" class="monoIcon">
+                </button>
+            </section>
+        </nav>
+        <nav>
+            <section>
+                <button class="buttonArea" title="Voltar">
+                    <img src="sistema/icons/arrow/simpleLeft.png" class="monoIcon disabled">
+                </button>
+                <button class="buttonArea" title="Avançar">
+                    <img src="sistema/icons/arrow/simpleRight.png" class="monoIcon disabled">
+                </button>
+                <button class="buttonArea" title="Reiniciar">
+                    <img src="sistema/icons/arrow/rotateLeft.png" class="monoIcon">
+                </button>
+                <button class="buttonArea" title="Início">
+                    <img src="sistema/icons/home.png" class="monoIcon disabled">
+                </button>
+            </section>
+            <form class="addressForm">
+                <button class="buttonArea inputLeftButton" title="Segurança">
+                    <img src="sistema/icons/security/blocked.png" class="monoIcon">
+                </button>
+                <input type="text" placeholder="navegar na internet">
+                <button class="buttonArea inputRightButton" title="Limpar pesquisa"
+                    onclick="document.getElementById('internetBrowser').value=''">
+                    <img src="sistema/icons/backspace.png" class="monoIcon">
+                </button>
+            </form>
+            <section>
+                <form class="searchForm">
+                    <input type="text" placeholder="localizar">
+                    <button class="buttonArea inputRightButton" title="Limpar pesquisa"
+                        onclick="document.getElementById('webSearch').value=''">
+                        <img src="sistema/icons/backspace.png" class="monoIcon">
+                    </button>
+                </form>
+                <button class="buttonArea" title="Opções">
+                    <img src="sistema/icons/menu.png" class="monoIcon">
+                </button>
+            </section>
+        </nav>
+    </header>
+    <main>
+        <iframe src="programas/internet/sites/gmail/index.html" frameborder="0"></iframe>
+    </main>
+</div>
+
+</html>
