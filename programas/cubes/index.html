@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<style>
+    #cCubes {
+        cursor: none !important;
+    }
+
+    .Ilock {
+        display: none !important;
+    }
+</style>
+<div class="body">
+    <header>
+        <div class="headDraggable lock" id="headDraggable"></div>
+        <nav>
+            <section>
+                <img src="programas/cubes/icon.png" class="windowIcon">
+                <span class="windowTitle"> Cubes </span>
+            </section>
+            <section>
+                <button class="buttonArea lock" title="Sempre no topo">
+                    <img src="sistema/icons/pin.png" class="monoIcon">
+                </button>
+                <button class="buttonArea esconder" title="Ocultar">
+                    <img src="sistema/icons/arrow/longBottom.png" class="monoIcon">
+                </button>
+                <button class="buttonArea minimizar lock Ilock" title="Minimizar">
+                    <img src="sistema/icons/arrow/longBottomLeft.png" class="monoIcon">
+                </button>
+                <button class="buttonArea maximizar Ilock" title="Maximizar">
+                    <img src="sistema/icons/arrow/longTopRight.png" class="monoIcon">
+                </button>
+                <button class="buttonArea closeWindow" id="closeWindow" title="Fechar">
+                    <img src="sistema/icons/close.png" class="monoIcon">
+                </button>
+            </section>
+        </nav>
+    </header>
+    <main>
+        <canvas id="cCubes" height="700" width="900">
+            Este navegadror não suporta a teclonogia do canvas, tente outro ou atualize
+        </canvas>
+    </main>
+</div>
+</html>
