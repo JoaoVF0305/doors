@@ -1,0 +1,714 @@
+* {
+    font: inherit;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 12px;
+    background-color: var(--bgContent);
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    background-color: var(--colLogo);
+    border: 3px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--colText);
+}
+
+::selection {
+    background-color: var(--accentColor);
+    color: var(--selectColor);
+}
+
+::placeholder {
+    color: var(--colText);
+    opacity: 0.5;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    accent-color: var(--checkColor);
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    grid-template-rows: auto 1fr;
+    background-color: var(--bgBody);
+    color: var(--colText);
+    font-size: 18px;
+    height: 100vh;
+    overflow: hidden;
+    scrollbar-color: var(--colLogo) var(--bgContent);
+}
+
+:is(header, footer) hr {
+    border: none;
+    border-left: 1px solid var(--bgContent);
+    margin-block: 10px;
+}
+
+:is(header, footer) form {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px;
+    height: 32px;
+    background-color: var(--bgContent);
+    border-radius: 100vmax;
+    max-width: 400px;
+    width: 100%;
+    transition: 300ms;
+}
+
+:is(header, footer) :is(button, input[type="reset"], input[type="submit"]) {
+    background-color: transparent;
+    border: none;
+    height: 40px;
+    aspect-ratio: 1;
+    border-radius: 100vmax;
+    color: var(--colIcon);
+    transition: 200ms;
+    cursor: pointer;
+}
+
+:is(header, footer) :is(button, label, input[type="reset"], input[type="submit"]):hover {
+    background-color: #0002;
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 22;
+}
+
+:is(header, footer) :is(button, label, input[type="reset"], input[type="submit"]):active {
+    background-color: #0003;
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 22;
+    scale: 0.9;
+}
+
+:is(header, footer) :is(button, input[type="reset"], input[type="submit"]):disabled {
+    display: none;
+}
+
+:is(header, footer) button.descriptionButton {
+    aspect-ratio: 0;
+    gap: 6px;
+    padding-inline: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+}
+
+main :is(header, footer) form :is(button, input[type="reset"], input[type="submit"]) {
+    height: 32px;
+}
+
+:is(header, footer) form>input[type="search"] {
+    outline: none;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    color: var(--colText);
+}
+
+:is(header, footer) form>input[type="search"]::-webkit-search-cancel-button {
+    appearance: none;
+}
+
+main :is(header, footer) form:has(input[type="search"]:focus) {
+    background-color: var(--bgBody);
+}
+
+#write {
+    background-color: var(--bgContent);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-inline: 15px;
+    gap: 10px;
+    height: 52px;
+    border-radius: 12px;
+    box-shadow: var(--boxShadow);
+    text-transform: capitalize;
+    transition: 300ms;
+}
+
+#write:hover {
+    background-color: var(--bgMain);
+}
+
+#write:active {
+    background-color: var(--bgContent);
+}
+
+body>nav {
+    width: 220px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    transition: 300ms;
+    overflow: hidden;
+    user-select: none;
+    margin-block: 6px;
+}
+
+body>:is(nav, header)>header {
+    display: grid;
+    margin-bottom: 6px;
+}
+
+body>:is(nav, header)>section {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    justify-content: space-between;
+    padding-inline: 6px;
+    padding-top: 6px;
+}
+
+body>:is(nav, header)>footer {
+    padding: 6px;
+}
+
+body>nav {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    border-radius: 12px;
+}
+
+body>nav>section {
+    background-color: var(--bgContent);
+    border-radius: 12px 12px 0 0;
+}
+
+body>nav>footer {
+    background-color: var(--bgContent);
+    border-radius: 0 0 12px 12px;
+}
+
+body>header {
+    width: 220px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    transition: 300ms;
+    overflow: hidden;
+    user-select: none;
+    margin-block: 6px;
+    grid-template-rows: auto 1fr auto;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+body>:is(nav, header)>section::-webkit-scrollbar {
+    width: 5px;
+}
+
+body>:is(nav, header)>section::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+body>:is(nav, header)>section::-webkit-scrollbar-thumb {
+    background-color: var(--colLogo);
+    border: 1px solid transparent;
+}
+
+body>:is(nav, header)>section::-webkit-scrollbar-thumb:hover {
+    background-color: var(--colText);
+}
+
+a.logo {
+    display: flex;
+    align-items: center;
+    color: var(--colLogo);
+    text-decoration: none;
+    height: 52px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    transition: 200ms;
+    padding-inline: 10px;
+    border-radius: 12px;
+}
+
+a.logo img {
+    height: 28px;
+    aspect-ratio: 1;
+    margin: 6px;
+    transition: inherit;
+}
+
+a.logo span {
+    font-family: verdana;
+    padding-inline: 10px;
+}
+
+.logo:hover {
+    background-color: #0002;
+}
+
+body>:is(nav, header) ul {
+    display: grid;
+    list-style: none;
+    gap: 6px;
+}
+
+body>:is(nav, header) ul li {
+    width: 100%;
+    min-height: 40px;
+    display: grid;
+    position: relative;
+}
+
+body>:is(nav, header) ul hr {
+    border: none;
+    border-top: 1px solid var(--bgMain);
+    margin-inline: 6px;
+    margin-block: 6px;
+}
+
+body>:is(nav, header) ul input[type="radio"] {
+    appearance: none;
+    position: absolute;
+}
+
+body>:is(nav, header) ul label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    border: none;
+    border-radius: 100vmax;
+    padding-inline: 14px;
+    text-align: left;
+    cursor: pointer;
+    transition: 150ms;
+    text-transform: capitalize;
+}
+
+body>:is(nav, header) ul label:hover {
+    background-color: #0002;
+}
+
+body>:is(nav, header) ul label:active {
+    background-color: #0003;
+    scale: 0.9;
+}
+
+body>:is(nav, header) ul label span {
+    transition: inherit;
+}
+
+body>:is(nav, header) ul label:hover>span {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 22;
+}
+
+body>:is(nav, header) ul input:checked~:is(label, label:hover, label:active) {
+    background-color: var(--checkColor);
+    box-shadow: var(--boxShadow);
+    font-weight: bold;
+    scale: 1;
+}
+
+body>:is(nav, header) ul input:checked~label span {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 22;
+}
+
+body>main {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background-color: var(--bgMain);
+    border-radius: 12px;
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+    overflow: hidden;
+    margin: 6px;
+}
+
+div.dropdown {
+    display: flex;
+    border-radius: 6px;
+    transition: 200ms;
+}
+
+div.dropdown>label {
+    display: flex;
+    height: 40px;
+    aspect-ratio: 1;
+    border-radius: 6px;
+    transition: inherit;
+}
+
+div.dropdown>button {
+    border-radius: 6px;
+    width: 18px;
+    font-size: 18px;
+}
+
+div.dropdown>label input[type="checkbox"] {
+    margin: auto;
+    appearance: none;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    cursor: pointer;
+}
+
+input[type="checkbox"]::after {
+    transition: 200ms;
+    content: "check_box_outline_blank";
+}
+
+input[type="checkbox"]:checked::after {
+    content: "check_box";
+    font-variation-settings: 'FILL' 1;
+    color: var(--accentColor);
+}
+
+main>header {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    border-bottom: 1px solid var(--bgBody);
+    user-select: none;
+}
+
+main>footer {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    border-top: 1px solid var(--bgBody);
+    user-select: none;
+}
+
+:is(header, footer)>div {
+    display: flex;
+    gap: 6px;
+}
+
+:is(header, footer)>div:last-of-type {
+    margin-left: auto;
+}
+
+main>section {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: calc(100% - 12px);
+    gap: 2px;
+    padding: 6px;
+}
+
+section .container {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    height: 40px;
+    border-radius: 6px;
+    padding-inline: 4px;
+    gap: 4px;
+    transition: 200ms;
+    position: relative;
+    z-index: 1;
+}
+
+section .container:hover {
+    background-color: #0002;
+}
+
+
+section .container:active {
+    background-color: #0003;
+}
+
+.container>label::after {
+    content: "check_box_outline_blank";
+    transition: 200ms;
+}
+
+section .container label {
+    width: 32px;
+    aspect-ratio: 1;
+}
+
+section input,
+section input::after {
+    position: absolute;
+    appearance: none;
+    display: none;
+}
+
+section input:checked~.container {
+    background-color: var(--checkColor);
+}
+
+section input:checked~.container>label::after {
+    content: "check_box";
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 22;
+}
+
+section .container a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    width: 200px;
+    height: 40px;
+}
+
+section .container a span.user {
+    color: var(--colLogo);
+    text-align: center;
+    margin-right: 10px;
+}
+
+section .container a span.email {
+    color: var(--colLogo);
+}
+
+section .container a:hover span.email {
+    text-decoration: underline;
+}
+
+section .unread>.container span:is(.email, .user) {
+    color: var(--accentColor);
+}
+
+section .container span.message {
+    color: var(--colText);
+    margin-right: auto;
+}
+
+section .container span.time {
+    color: var(--colText);
+    font-size: 14px;
+}
+
+section .container>button.reply {
+    visibility: hidden;
+    width: 0;
+    scale: 0;
+    transition: inherit;
+}
+
+section .container:hover>button.reply {
+    visibility: visible;
+    scale: 1;
+    width: 32px;
+}
+
+section .container :is(button, label):hover {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 22;
+}
+
+section .container>label.check {
+    visibility: hidden;
+    width: 0;
+    scale: 0;
+    transition: inherit;
+}
+
+section :is(input:checked~.container, .container:hover)>label.check {
+    visibility: visible;
+    scale: 1;
+    width: 32px;
+}
+
+
+section .container input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .container :is(label, button) {
+    text-align: center;
+    line-height: 32px;
+    background-color: transparent;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    transition: inherit;
+    border: none;
+    user-select: none;
+}
+
+section .container :is(label, button):hover {
+    background-color: #0002;
+}
+
+section .container :is(label, button):active {
+    background-color: #0003;
+    scale: 0.9;
+}
+
+#navResizer {
+    position: absolute;
+}
+
+#navResizer::after {
+    display: none;
+}
+
+#navResizer:checked~nav {
+    width: 52px;
+}
+
+#navResizer:checked~nav>header {
+    display: grid;
+}
+
+#navResizer:checked~nav #write span:nth-child(2) {
+    display: none;
+}
+
+#headerResizer:checked~header .logo {
+    padding-inline: 0;
+}
+
+
+#headerResizer:checked~header .logo span:nth-child(2) {
+    display: none;
+}
+
+#navResizer:checked~nav ul label {
+    padding-inline: 9px;
+}
+
+#navResizer:checked~nav ul label span:nth-child(2) {
+    display: none;
+}
+
+.headerResizer {
+    position: absolute;
+}
+
+#headerResizer::after {
+    display: none;
+}
+
+#headerResizer:checked~header {
+    width: 52px;
+}
+
+#headerResizer:checked~header ul label {
+    padding-inline: 9px;
+}
+
+#headerResizer:checked~header ul label span:nth-child(2) {
+    display: none;
+}
+
+#headerResizer:checked~header #navDoisLabel span {
+    rotate: 180deg;
+}
+
+#navResizer:checked~nav #navUmLabel span {
+    rotate: 180deg;
+}
+
+#headerResizer:checked~header .logo img {
+    height: 22px;
+    margin: 15px;
+}
+
+.progress {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr 1fr;
+    height: 32px;
+    padding: 4px;
+    transition: 200ms;
+    border-radius: 6px;
+    color: var(--colText);
+    text-decoration: none;
+}
+
+.progress:hover {
+    background-color: #0002;
+}
+
+.progress:active {
+    background-color: #0002;
+    scale: 0.95;
+}
+
+.progress span {
+    grid-row: 1 / 3;
+    width: 32px;
+    text-align: center;
+}
+
+.progress div {
+    text-decoration: none;
+    font-size: 13px;
+    margin-inline: 4px;
+}
+
+.progress progress {
+    appearance: none;
+    background-color: var(--bgBody);
+    border: none;
+    height: 6px;
+    border-radius: 10px;
+    margin-inline: 4px;
+}
+
+.progress progress::-moz-progress-bar {
+    background-color: var(--accentColor);
+}
+
+.progress progress::-webkit-progress-bar {
+    appearance: none;
+    background-color: var(--bgBody);
+    border: none;
+    height: 6px;
+    border-radius: 3px;
+    overflow: auto;
+}
+
+.progress progress::-webkit-progress-value {
+    background-color: var(--accentColor);
+}
+
+div.info {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding-inline: 12px;
+    gap: 12px;
+}
+
+div.info a {
+    font-size: 14px;
+    line-height: 40px;
+    text-decoration: none;
+    color: var(--colLogo);
+    text-transform: capitalize;
+}
+
+div.info a:hover {
+    text-decoration: underline;
+}
+
+div.info a:active {
+    text-decoration: underline;
+    color: var(--colText);
+}
+
+div.info>hr {
+    width: 4px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: var(--bgContent);
+}

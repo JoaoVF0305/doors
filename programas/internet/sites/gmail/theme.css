@@ -1,0 +1,73 @@
+@media (prefers-color-scheme: dark) {
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 22;
+        font-size: 22px;
+    }
+
+    html {
+        color-scheme: dark;
+    }
+
+    :root {
+        --accentColor: #87b1f4;
+        --bgBody: #000000;
+        --bgMain: #1f1f22;
+        --bgContent: #161618;
+        --colLogo: #a0a6b7;
+        --colText: #e0e0e0;
+        --colIcon: #d0d0d0;
+        --checkColor: #072b5f;
+        --selectColor: #000;
+        --boxShadow: 0 1px 2px #0003;
+    }
+
+}
+
+@media (prefers-color-scheme: dark) {
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 22;
+        font-size: 22px;
+    }
+
+    html {
+        color-scheme: dark;
+    }
+
+    :root {
+        --accentColor: #87b1f4;
+        --bgBody: #202124;
+        --bgMain: #313236;
+        --bgContent: #292a2e;
+        --colLogo: #a0a6b7;
+        --colText: #e0e0e0;
+        --colIcon: #d0d0d0;
+        --checkColor: #112f74;
+        --selectColor: #000;
+        --boxShadow: 0 1px 2px #0003;
+    }
+
+}
+
+@media (prefers-color-scheme: light) {
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 000, 'opsz' 22;
+        font-size: 22px;
+    }
+
+    html {
+        color-scheme: light;
+    }
+
+    :root {
+        --accentColor: #1c59bb;
+        --bgBody: #e4f3ff;
+        --bgMain: #fff;
+        --bgContent: #c5dfff;
+        --colLogo: #1e4678;
+        --colText: #041b36;
+        --colIcon: #041b36;
+        --checkColor: #4dbdf1;
+        --selectColor: #fff;
+        --boxShadow: none;
+    }
+}
