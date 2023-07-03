@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<body>
+    <div class="body unresizeble">
+        <header>
+            <div class="headDraggable" id="headDraggable"></div>
+            <nav>
+                <section>
+                    <img src="programas/calculadora/icon.png" class="windowIcon">
+                    <button class="buttonArea" title="Propriedades">
+                        <img src="sistema/icons/properties.png" class="monoIcon">
+                    </button>
+                    <span class="windowTitle"> Calculadora </span>
+                </section>
+                <section>
+                    <button class="buttonArea" title="Sempre no topo">
+                        <img src="sistema/icons/pin.png" class="monoIcon">
+                    </button>
+                    <button class="buttonArea esconder" title="Ocultar">
+                        <img src="sistema/icons/arrow/longBottom.png" class="monoIcon">
+                    </button>
+                    <button class="buttonArea minimizar lock" title="Minimizar">
+                        <img src="sistema/icons/arrow/longBottomLeft.png" class="monoIcon">
+                    </button>
+                    <button class="buttonArea maximizar" title="Maximizar" style="display: none;">
+                        <img src="sistema/icons/arrow/longTopRight.png" class="monoIcon">
+                    </button>
+                    <button class="buttonArea closeWindow" id="closeWindow" title="Fechar">
+                        <img src="sistema/icons/close.png" class="monoIcon">
+                    </button>
+                </section>
+            </nav>
+            <nav class="calculatorNav">
+                <section>
+                    <input type="text" id="calculoDisplay" class="calculoDisplay" readonly>
+                    <input type="text" class="resultadoDisplay" readonly>
+                </section>
+            </nav>
+        </header>
+        <main class="mainCalc">
+            <section>
+                <button class="operadores calcBtn" id="limparCalculo">
+                    <img src="sistema/icons/trashcam.png" class="monoIcon">
+                    <span> Limpar </span>
+                </button>
+                <button class="operadores calcBtn" id="backspace">
+                    <img src="sistema/icons/backspace.png" class="monoIcon">
+                    <span> Apagar </span>
+                </button>
+                <button class="operadorIgual calcBtn" id="igual">
+                    <img src="sistema/icons/calc/igual.png" class="whiteIcon">
+                    <span> Igual </span>
+                </button>
+                <button class="operadores calcBtn" id="1DivPx">
+                    <sup> 1 </sup> / <sub> x </sub>
+                </button>
+                <button class="operadores calcBtn" id="raiz"> √ </button>
+                <button class="operadores calcBtn" id="elev2"> <sub> x </sub> <sup> 2 </sup> </button>
+                <button class="operadores calcBtn" id="porcentagem"> % </button>
+                <button class="numericos calcBtn" id="tecla7">7</button>
+                <button class="numericos calcBtn" id="tecla8">8</button>
+                <button class="numericos calcBtn" id="tecla9">9</button>
+                <button class="operadores calcBtn" id="operadorAdcionar">+</button>
+                <button class="numericos calcBtn" id="tecla4">4</button>
+                <button class="numericos calcBtn" id="tecla5">5</button>
+                <button class="numericos calcBtn" id="tecla6">6</button>
+                <button class="operadores calcBtn" id="operadorSubtrair">-</button>
+                <button class="numericos calcBtn" id="tecla1">1</button>
+                <button class="numericos calcBtn" id="tecla2">2</button>
+                <button class="numericos calcBtn" id="tecla3">3</button>
+                <button class="operadores calcBtn" id="operadorMultiplicar">x</button>
+                <button class="operadores calcBtn" id="inverter">±</button>
+                <button class="numericos calcBtn" id="tecla0">0</button>
+                <button class="operadores calcBtn" id="decimal">,</button>
+                <button class="operadores calcBtn" id="operadorDividir">÷</button>
+            </section>
+        </main>
+    </div>
+</body>
+
+
+</html>
