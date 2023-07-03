@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<div class="body">
+    <header>
+        <div class="headDraggable" id="headDraggable"></div>
+        <nav class="allowTabs">
+            <section>
+                <img src="programas/paint/icon.png" class="windowIcon">
+                <label class="windowTab">
+                    <input type="radio" name="filesTabSelection" checked>
+                    <div class="checkTab"> </div>
+                    <img src="sistema/icons/paint/color.png" class="monoIcon">
+                    <button title="Fechar aba" class="closeTab">
+                        <img src="sistema/icons/close.png" class="monoIcon">
+                    </button>
+                    <span> Desenho 1 </span>
+                </label>
+                <label class="windowTab">
+                    <input type="radio" name="filesTabSelection">
+                    <div class="checkTab"> </div>
+                    <img src="sistema/icons/paint/color.png" class="monoIcon">
+                    <button title="Fechar aba" class="closeTab">
+                        <img src="sistema/icons/close.png" class="monoIcon">
+                    </button>
+                    <span> Desenho 2 </span>
+                </label>
+                <button class="buttonArea" title="Nova aba" id="arquivos" onclick="createWindow(event)">
+                    <img src="sistema/icons/more.png" class="monoIcon">
+                </button>
+            </section>
+            <section>
+                <button class="buttonArea" title="Sempre no topo">
+                    <img src="sistema/icons/pin.png" class="monoIcon">
+                </button>
+                <button class="buttonArea esconder" title="Ocultar">
+                    <img src="sistema/icons/arrow/longBottom.png" class="monoIcon">
+                </button>
+                <button class="buttonArea minimizar lock" title="Minimizar">
+                    <img src="sistema/icons/arrow/longBottomLeft.png" class="monoIcon">
+                </button>
+                <button class="buttonArea maximizar" title="Maximizar">
+                    <img src="sistema/icons/arrow/longTopRight.png" class="monoIcon">
+                </button>
+                <button class="buttonArea closeWindow" id="closeWindow" title="Fechar">
+                    <img src="sistema/icons/close.png" class="monoIcon">
+                </button>
+            </section>
+        </nav>
+        <nav>
+            <section>
+                <button class="buttonArea" title="Salvar">
+                    <img src="sistema/icons/save.png" class="monoIcon">
+                </button>
+                <button class="buttonArea" title="Salvar">
+                    <img src="sistema/icons/new.png" class="monoIcon">
+                </button>
+                <button class="buttonArea desfazer" title="Desfazer">
+                    <img src="sistema/icons/arrow/rotateLeft.png" class="monoIcon disabled">
+                </button>
+                <button class="buttonArea refazer" title="Refazer">
+                    <img src="sistema/icons/arrow/rotateRight.png" class="monoIcon disabled">
+                </button>
+                <button class="buttonArea" title="Renomear">
+                    <img src="sistema/icons/rename.png" class="monoIcon">
+                </button>
+            </section>
+            <section>
+                <button class="buttonArea apagar" title="Apagar tudo">
+                    <img src="sistema/icons/trashcam.png" class="monoIcon">
+                </button>
+                <button class="buttonArea" title="Propriedades">
+                    <img src="sistema/icons/properties.png" class="monoIcon">
+                </button>
+            </section>
+        </nav>
+        <nav>
+            <section>
+                <div class="paintSelection">
+                    <button class="buttonArea inputLeftButton pincel select" id="selected" title="Desenhar">
+                        <img src="sistema/icons/paint/paint.png" class="monoIcon">
+                    </button>
+                    <input type="number" value="2" class="inputAreaBig" id="penWidthInput"
+                        title="Largura da caneta (px)">
+                </div>
+                <div class="paintSelection">
+                    <button class="buttonArea inputLeftButton eraser select" title="Apagar">
+                        <img src="sistema/icons/eraser.png" class="monoIcon">
+                    </button>
+                    <input type="number" value="6" class="inputAreaBig" id="eraserWidthInput"
+                        title="Largura da borracha (px)">
+                </div>
+                <label title="Escolher cor">
+                    <input type="color" class="color">
+                    <div class="buttonArea">
+                        <img src="sistema/icons/paint/color.png" class="monoIcon">
+                        <div id="colorSelector" class="colorSelector"> </div>
+                    </div>
+                </label>
+                <label title="Escolher papel">
+                    <input type="color" class="color2">
+                    <div class="buttonArea">
+                        <img src="sistema/icons/paper.png" class="monoIcon">
+                        <div id="paperSelector" class="paperSelector"> </div>
+                    </div>
+                </label>
+            </section>
+            <section>
+                <button class="buttonArea select fill" title="Balde de tinta">
+                    <img src="sistema/icons/fill.png" class="monoIcon">
+                </button>
+                <button class="buttonArea select line" title="Linha">
+                    <img src="sistema/icons/paint/line.png" class="monoIcon">
+                </button>
+                <button class="buttonArea select circle" title="Circulo">
+                    <img src="sistema/icons/paint/circle.png" class="monoIcon">
+                </button>
+                <button class="buttonArea select square" title="Quadrado">
+                    <img src="sistema/icons/paint/box.png" class="monoIcon">
+                </button>
+            </section>
+        </nav>
+    </header>
+    <main class="mainPaint">
+        <section>
+            <canvas class="canvas" id="canvas" width="400" height="400"></canvas>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <section>
+                <span class="textareaInfo"> X: 0 </span>
+                <hr>
+                <span class="textareaInfo"> Y: 0 </span>
+            </section>
+            <section>
+                <input type="number" value="400" id="widthInput" class="inputArea" title="Largura da tela (px)">
+                <input type="number" value="400" id="heightInput" class="inputArea" title="Altura da tela (px)">
+            </section>
+        </nav>
+    </footer>
+</div>
+
+</html>
