@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(../../sistema/wpp.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#cx {
+    border: 1px solid;
+    border-radius: 0 0 6px 6px;
+    background-color: #121212;
+    padding: 35px 5px 5px 5px;
+    display: inline-flex;
+    position: absolute;
+}
+
+#painel {
+    top: 7.5px;
+    left: 8px;
+    width: 237px;
+    height: 15px;
+    /* right: 8px; */
+    position: absolute;
+    
+}
+    #opcoes{
+        position: absolute;
+        font-size: 17px;
+        left: 4px;
+        top: -5.8px;
+        color: #ffffff;
+    }
+        #dificuldade {
+            
+            position: absolute;
+            background-color: #1c1c1c;
+            top: 15px;
+            border-radius: 5px;
+            color: white;
+        }
+        .close {
+            display: none;
+        }
+        p {
+            margin-left: 10px;
+            margin-right: 35px;
+            font-size: 12px;
+        }
+        #diff {
+            margin: 3px 0 0 7px;
+            font-size: 12px;
+        }
+        #facil {
+            color: #36ba67;
+            padding: 3px 3px;
+        }
+        #medio {
+            color: #cacd22;
+            padding: 3px 3px;
+        }
+        #dificil {
+            color: #dc143c;
+            padding: 3px 3px;
+            border-radius: 0 0 5px 5px;
+        }
+        .optDiff:hover {
+            background-color: #242424;
+        }
+    #novoJogo {
+        position: absolute;
+        font-size: 12px;
+        color: #ffffff;
+        left: 26px;
+        top: 1px;
+    }
+    #tempo {
+        display: inline-block;
+        color: #dbdbdb;
+        font-size: 16px;
+        position: absolute;
+    }
+    #flag {
+        display: inline-block;
+        color: #dbdbdb;
+        font-size: 16px;
+        position: absolute;
+    }
+    .tempoFacil{
+        left: 178.5px;
+    }
+    .flagFacil{
+        left: 216px;
+    }
+    .tempoMedio{
+        left: 310.5px;
+    }
+    .flagMedio{
+        left: 348px;
+    }
+    .tempoDificil{
+        left: 443.5px; 
+    }
+    .flagDificil{
+        left: 481px;   
+    }
+
+td {
+    background-color: #262626;
+    text-align: center;
+    vertical-align: center;
+    border-radius: 4px;
+    height: 25px;
+    width: 25px;
+    color: #777777;
+}
+
+.select {
+    background-color: #262626;
+}
+
+.invisible {
+    display: none;
+}
